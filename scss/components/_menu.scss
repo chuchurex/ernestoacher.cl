@@ -1,0 +1,74 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+%menu-base {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    @include respond-to('md') {
+      text-align: center;
+    }
+  }
+
+  a {
+    font-family: $font-menu;
+    color: $color-text;
+    @include smooth-transition(all, $transition-fast);
+    display: inline-block;
+    padding: 0.2rem 0;
+
+    &:hover {
+      color: $color-silver;
+      @include text-glow;
+    }
+  }
+
+  @include respond-to('md') {
+    padding: $spacing-md $spacing-lg;
+    justify-content: center;
+
+    li {
+      text-align: center;
+    }
+  }
+}
+
+.menu-principal {
+  @extend %menu-base;
+  padding-left: 5%;
+
+  li {
+    text-align: right;
+  }
+
+  a {
+    font-size: clamp(0.8rem, 1.2vw, $menu-size);
+    @include underline-effect($color-silver, right);
+
+    &.active {
+      color: $color-silver;
+    }
+  }
+}
+
+.menu-media {
+  @extend %menu-base;
+  justify-content: flex-end;
+  padding-right: 5%;
+
+  li {
+    text-align: left;
+  }
+
+  a {
+    font-size: clamp(0.85rem, 1.3vw, 1.15rem);
+    @include underline-effect($color-silver, left);
+  }
+}

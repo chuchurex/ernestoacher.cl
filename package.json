@@ -1,0 +1,21 @@
+{
+  "name": "ernestoacher.cl",
+  "version": "1.0.0",
+  "description": "Recreación fiel del sitio web oficial de **Ernesto Acher** (versión 2008), como homenaje a este destacado músico, compositor, director y humorista argentino.",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch scss:css --style=expanded --source-map",
+    "sass:build": "sass scss:css --style=compressed --no-source-map",
+    "serve": "live-server --port=3000 --watch=css,js,index.html --ignore=scss,node_modules",
+    "dev": "npm-run-all --parallel sass:watch serve",
+    "build": "npm run sass:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.97.2"
+  }
+}

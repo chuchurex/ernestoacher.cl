@@ -1,0 +1,66 @@
+@use 'variables' as *;
+
+// Responsive breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'xl' {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+  @if $breakpoint == 'lg' {
+    @media (max-width: $breakpoint-lg) { @content; }
+  }
+  @if $breakpoint == 'md' {
+    @media (max-width: $breakpoint-md) { @content; }
+  }
+  @if $breakpoint == 'sm' {
+    @media (max-width: $breakpoint-sm) { @content; }
+  }
+}
+
+// Transiciones suaves
+@mixin smooth-transition($property: all, $duration: $transition-normal) {
+  transition: $property $duration;
+}
+
+// Centrado absoluto
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Text shadow glow
+@mixin text-glow($color: rgba(255,255,255,0.3)) {
+  text-shadow: 0 0 10px $color;
+}
+
+// Underline effect
+@mixin underline-effect($color: $color-silver, $direction: left) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    @if $direction == 'left' {
+      left: 0;
+    } @else {
+      right: 0;
+    }
+    width: 0;
+    height: 1px;
+    background-color: $color;
+    transition: width $transition-normal;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// Flexbox center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

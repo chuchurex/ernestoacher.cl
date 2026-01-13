@@ -1,0 +1,39 @@
+// ========================================
+// Variables - Ernesto Acher
+// Colores, tipografías y valores del diseño
+// ========================================
+
+// Colores principales - extraídos del sitio original
+$color-background: #0d0d0d;
+$color-wine: #6B1C23;
+$color-wine-dark: #4A1117;
+$color-text: #ffffff;
+$color-text-dim: #cccccc;
+$color-silver: #d4d4d4;
+
+// Tipografía
+$font-logo: 'Great Vibes', cursive;
+$font-menu: 'Crimson Text', Georgia, serif;
+$font-body: Georgia, 'Times New Roman', serif;
+
+// Tamaños de fuente
+$logo-size: 4rem;
+$menu-size: 1.1rem;
+$text-size: 0.85rem;
+
+// Transiciones
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+
+// Breakpoints
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
+// Espaciado
+$spacing-xs: 0.3rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
