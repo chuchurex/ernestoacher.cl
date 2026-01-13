@@ -1,0 +1,48 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.ernesto-photo {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 8;
+  pointer-events: none;
+
+  img {
+    max-height: 70vh;
+    width: auto;
+    filter: drop-shadow(0 0 30px rgba(0,0,0,0.8));
+  }
+
+  @include respond-to('xl') {
+    right: 5%;
+
+    img {
+      max-height: 60vh;
+    }
+  }
+
+  @include respond-to('lg') {
+    right: 2%;
+
+    img {
+      max-height: 50vh;
+    }
+  }
+
+  @include respond-to('md') {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    padding: $spacing-lg;
+
+    img {
+      max-height: 50vh;
+      max-width: 80%;
+    }
+  }
+}

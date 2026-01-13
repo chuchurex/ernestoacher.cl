@@ -16,3 +16,10 @@ node_modules/
 # Build outputs (if you add build process)
 dist/
 build/
+
+# Sass
+.sass-cache/
+*.css.map
+
+# Package lock
+package-lock.json
