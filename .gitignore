@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Node modules (if you add them later)
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs (if you add build process)
+dist/
+build/
