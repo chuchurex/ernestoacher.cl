@@ -1,0 +1,9 @@
+name = "ernestoacher-cl"
+compatibility_date = "2026-01-13"
+
+[site]
+bucket = "./"
+
+[env.production]
+name = "ernestoacher-cl"
+route = "ernestoacher.cl/*"
