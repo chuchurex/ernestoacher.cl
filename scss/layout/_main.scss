@@ -1,7 +1,14 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-.site-container {
+// ========================================
+// LAYOUT PARA PORTADA (index.html)
+// ========================================
+// Usa clases específicas .home-* para evitar conflictos
+// con las páginas interiores que usan .site-container
+// ========================================
+
+.home-container {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -15,7 +22,7 @@
   }
 }
 
-.main-content {
+.home-content {
   position: relative;
   width: 100%;
   height: 100%;
