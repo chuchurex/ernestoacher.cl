@@ -16,51 +16,42 @@
 }
 
 .main-content {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr;
   position: relative;
-  padding-top: 15%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; // Prevent spill
 
-  @include respond-to('lg') {
-    grid-template-columns: 1fr 1.5fr 1fr;
-  }
+  // We remove the rigid grid to allow organic placement
+  // display: grid; ...
 
   @include respond-to('md') {
+    // On mobile we might revert to flex column
     display: flex;
     flex-direction: column;
-    padding-top: 20%;
-    gap: $spacing-lg;
+    overflow-y: auto;
   }
 }
 
-.ellipse-bg {
+.ellipse-container {
   @include absolute-center;
-  width: 85%;
-  height: 70%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center,
-    $color-wine 0%,
-    $color-wine-dark 60%,
-    transparent 70%);
-  opacity: 0.9;
-  z-index: 1;
+  // Make it large enough to act as the main framing
+  width: 100%;
+  max-width: 1200px; // Max width constraints
+  height: 90vh; // Occupy most of height
+  z-index: 0; // Behind everything
   pointer-events: none;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    right: -5%;
-    bottom: -5%;
-    border-radius: 50%;
-    border: 3px solid $color-wine;
-    opacity: 0.4;
-  }
+  // Keep the rotation
+  transform: translate(-50%, -50%) rotate(-15deg);
 
   @include respond-to('md') {
     display: none;
   }
+}
+
+.ellipse-path {
+  fill: $color-wine;
+  opacity: 0.9;
+  // Optional: subtle glow or shadow if needed
+  // filter: drop-shadow(0 0 2px rgba($color-wine, 0.5));
 }

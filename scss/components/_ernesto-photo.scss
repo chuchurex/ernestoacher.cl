@@ -3,16 +3,17 @@
 
 .ernesto-photo {
   position: absolute;
-  right: 10%;
-  top: 50%;
+  right: 18%; // Moved inward to sit "inside" the ellipse curve visually
+  top: 55%;
   transform: translateY(-50%);
-  z-index: 8;
+  z-index: 2; // Above background, below potential overlays
   pointer-events: none;
 
   img {
-    max-height: 70vh;
+    max-height: 75vh; // Larger to match reference
     width: auto;
-    filter: drop-shadow(0 0 30px rgba(0,0,0,0.8));
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8));
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%); // Soft fade at bottom
   }
 
   @include respond-to('xl') {
