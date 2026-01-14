@@ -434,8 +434,68 @@ body {
 }
 
 .content-wrapper {
-  width: 60%;
+  width: 70%;
   background-color: rgb(204, 204, 204);
+}
+
+.content-header {
+  position: relative;
+  background-color: #0e0e0e;
+  background-image: url("../assets/images/ernesto-grupo.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 200px;
+}
+
+.secondary-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+}
+.secondary-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  display: block;
+  transition: all 0.2s ease;
+}
+.secondary-menu a:hover {
+  text-decoration: underline;
+}
+
+.header-menu {
+  background-color: #666;
+  padding: 8px 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.header-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+.header-menu a:hover {
+  text-decoration: underline;
+}
+
+.menu-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
 }
 
 .main-content {
