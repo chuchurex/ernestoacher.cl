@@ -20,7 +20,11 @@
                 text-decoration: none;
                 display: block;
                 padding: $spacing-sm 10px;
-                font-size: $font-size-medium;
+                font-size: 11px; // Fijo para evitar wrap
+                line-height: 1.3;
+                white-space: nowrap; // Evita saltos de línea
+                overflow: hidden;
+                text-overflow: ellipsis; // Añade ... si es muy largo
                 transition: $transition-base;
 
                 &:hover {
