@@ -1,7 +1,49 @@
 # Environment variables
 .env
 
-# Node modules (if you add them later)
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Scripts de desarrollo
+download_*.py
+extract_content.py
+generate_anecdotario.py
+monitor_galerias.sh
+
+# Backups y contenido descargado
+backup/
+content/
+data/
+
+# Logs
+*.log
+
+# Archivos de datos temporales
+*.json
+!package.json
+
+# Documentación de proceso
+*_DOWNLOAD_SUMMARY.md
+*_PROGRESO.md
+RECUPERACION_PROGRESO.md
+ANECDOTAS_RECUPERADAS.md
+RESUMEN_*.md
+PLAN_REDESIGN.md
+INVENTARIO_COMPARATIVO.md
+ESTADO_PROYECTO.md
+PROGRESO_GALERIAS.md
+
+# Archivos de trabajo/desarrollo
+inbox/
+index-nuevo.html
+anecdotario-old.html
+anecdotario-v2.html
+cloud.html
+
+# Node modules
 node_modules/
 
 # macOS
@@ -13,7 +55,7 @@ node_modules/
 *.swp
 *.swo
 
-# Build outputs (if you add build process)
+# Build outputs
 dist/
 build/
 
