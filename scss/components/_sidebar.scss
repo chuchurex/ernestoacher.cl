@@ -4,8 +4,12 @@
 
 @use '../variables' as *;
 
-.sidebar {
+// Contenedor del sidebar (carga dinámica)
+#sidebar-container {
     width: $sidebar-width;
+}
+
+.sidebar {
     background-color: $color-bg-dark;
     padding: 15px 10px; // Reducido para dar más espacio al texto
 
