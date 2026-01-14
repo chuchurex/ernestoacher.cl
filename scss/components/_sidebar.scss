@@ -2,6 +2,8 @@
 // Sidebar Component
 // ========================================
 
+@use '../variables' as *;
+
 .sidebar {
     width: $sidebar-width;
     background-color: $color-bg-dark;
