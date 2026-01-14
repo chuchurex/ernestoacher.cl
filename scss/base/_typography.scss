@@ -1,20 +1,8 @@
 @use '../variables' as *;
 
 body {
-  font-family: $font-body;
-  background-color: $color-background;
-  color: $color-text;
+  font-family: $font-family-base;
+  background-color: $color-bg-dark;
+  color: $color-text-dark;
   line-height: 1.5;
-}
-
-.logo {
-  font-family: $font-logo;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 400;
-  color: $color-silver;
-  text-shadow:
-    1px 1px 2px rgba(0,0,0,0.5),
-    0 0 20px rgba(212, 212, 212, 0.3);
-  letter-spacing: 2px;
-  white-space: nowrap;
 }

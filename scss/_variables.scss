@@ -1,9 +1,20 @@
 // ========================================
 // Variables - Ernesto Acher
-// Colores, tipografías y valores del diseño
+// Colores, tipografías y valores del diseño original
 // ========================================
 
-// Colores principales - extraídos del sitio original
+// Colores principales - diseño original fiel
+$color-bg-dark: rgb(16, 14, 27);
+$color-bg-header: #0e0e0e;
+$color-bg-content: rgb(204, 204, 204);
+$color-menu-bar: #666;
+$color-text-light: #fff;
+$color-text-dark: #333;
+$color-text-muted: #999;
+$color-link: #000099;
+$color-accent: #cc0000;
+
+// Variables para compatibilidad con index.html (styles.scss)
 $color-background: #0d0d0d;
 $color-wine: #6B1C23;
 $color-wine-dark: #4A1117;
@@ -11,29 +22,45 @@ $color-text: #ffffff;
 $color-text-dim: #cccccc;
 $color-silver: #d4d4d4;
 
-// Tipografía
+// Tipografía - diseño original
+$font-family-base: Verdana, Arial, Helvetica, sans-serif;
+$font-size-base: 11px;
+$font-size-small: 10px;
+$font-size-medium: 12px;
+$font-size-heading: 14px;
+
+// Tipografía para compatibilidad con index.html (styles.scss)
 $font-logo: 'Great Vibes', cursive;
 $font-menu: 'Crimson Text', Georgia, serif;
 $font-body: Georgia, 'Times New Roman', serif;
-
-// Tamaños de fuente
 $logo-size: 4rem;
 $menu-size: 1.1rem;
 $text-size: 0.85rem;
 
-// Transiciones
+// Layout - diseño original
+$layout-max-width: 1350px;
+$sidebar-width: 30%;
+$content-width: 60%;
+$header-min-height: 200px;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-sm: 8px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 30px;
+$spacing-xxl: 40px;
+
+// Transitions
+$transition-base: all 0.2s ease;
 $transition-fast: 0.2s ease;
 $transition-normal: 0.3s ease;
+
+// Z-index
+$z-index-menu: 10;
 
 // Breakpoints
 $breakpoint-xl: 1200px;
 $breakpoint-lg: 992px;
 $breakpoint-md: 768px;
 $breakpoint-sm: 576px;
-
-// Espaciado
-$spacing-xs: 0.3rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 2rem;
-$spacing-xl: 3rem;
