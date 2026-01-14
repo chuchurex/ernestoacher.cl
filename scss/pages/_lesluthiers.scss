@@ -1,0 +1,46 @@
+// ========================================
+// Les Luthiers Page Styles
+// ========================================
+
+.content-header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-lg;
+}
+
+.page-nav-right {
+    min-width: 160px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: $spacing-sm 0;
+            font-size: $font-size-base;
+
+            &.active {
+                color: $color-text-dark;
+                font-weight: normal;
+            }
+
+            a {
+                color: $color-link;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.content-image-right {
+    float: right;
+    margin: 0 0 $spacing-md $spacing-lg;
+    max-width: 220px;
+    height: auto;
+}

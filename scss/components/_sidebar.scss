@@ -1,0 +1,31 @@
+// ========================================
+// Sidebar Component
+// ========================================
+
+.sidebar {
+    width: $sidebar-width;
+    background-color: $color-bg-dark;
+    padding: $spacing-lg;
+
+    nav ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                color: $color-text-muted;
+                text-decoration: none;
+                display: block;
+                padding: $spacing-sm 10px;
+                font-size: $font-size-medium;
+                transition: $transition-base;
+
+                &:hover {
+                    color: $color-text-light;
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}

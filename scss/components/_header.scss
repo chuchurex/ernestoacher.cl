@@ -1,0 +1,67 @@
+// ========================================
+// Header Component
+// ========================================
+
+.content-header {
+    position: relative;
+    background-color: $color-bg-header;
+    background-image: url('../assets/images/ernesto-grupo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: $header-min-height;
+}
+
+.secondary-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    z-index: $z-index-menu;
+
+    a {
+        color: $color-text-light;
+        text-decoration: none;
+        font-size: $font-size-base;
+        display: block;
+        transition: $transition-base;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.header-menu {
+    background-color: $color-menu-bar;
+    padding: $spacing-sm $spacing-md;
+    display: flex;
+    gap: $spacing-lg;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    a {
+        color: $color-text-light;
+        text-decoration: none;
+        font-size: $font-size-base;
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        transition: $transition-base;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.menu-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}

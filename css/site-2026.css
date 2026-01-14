@@ -1,0 +1,381 @@
+/* =====================================================
+   ERNESTO ACHER - SITIO 2026
+   Sistema de estilos moderno preservando estructura original
+   ===================================================== */
+
+/* ==================== VARIABLES CSS ==================== */
+:root {
+    /* Colores principales */
+    --color-bg: #0a0a0f;
+    --color-bg-light: #1a1a2e;
+    --color-bg-card: #151521;
+    --color-primary: #d4af37;
+    --color-primary-dark: #b8962f;
+    --color-text: #e8e8e8;
+    --color-text-dim: #a0a0a0;
+    --color-border: #2a2a3e;
+
+    /* Tipografía */
+    --font-display: 'Great Vibes', cursive;
+    --font-body: 'Crimson Text', serif;
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+
+    /* Layout */
+    --sidebar-width: 280px;
+    --content-max-width: 1200px;
+    --header-height: 120px;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ==================== RESET Y BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ==================== TIPOGRAFÍA ==================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--font-display);
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: var(--color-primary);
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* ==================== LAYOUT PRINCIPAL ==================== */
+.site-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header */
+.site-header-main {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--color-bg-light) 0%, var(--color-bg) 100%);
+    border-bottom: 2px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.site-header-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../gfx/f.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.logo-main {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--color-primary);
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.logo-ribbon {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--color-primary) 50%,
+        transparent 100%);
+}
+
+/* Container principal con sidebar */
+.main-container {
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Sidebar */
+.sidebar-nav {
+    width: var(--sidebar-width);
+    background-color: var(--color-bg-light);
+    border-right: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    padding: var(--spacing-md) 0;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+    transition: all var(--transition-fast);
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    color: var(--color-primary);
+    background-color: rgba(212, 175, 55, 0.1);
+    border-left-color: var(--color-primary);
+}
+
+/* Content area */
+.main-content {
+    flex: 1;
+    padding: var(--spacing-lg);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ==================== COMPONENTES ==================== */
+
+/* Section */
+.content-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+}
+
+.section-intro {
+    font-size: 1.2rem;
+    color: var(--color-text-dim);
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+}
+
+/* Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-text {
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-bg-light);
+    border-top: 2px solid var(--color-primary);
+    padding: var(--spacing-md);
+    text-align: center;
+    color: var(--color-text-dim);
+}
+
+.update-link {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 240px;
+    }
+
+    .main-content {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .logo-main {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ==================== UTILIDADES ==================== */
+.text-center {
+    text-align: center;
+}
+
+.text-dim {
+    color: var(--color-text-dim);
+}
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }

@@ -1,0 +1,56 @@
+// ========================================
+// Content Component
+// ========================================
+
+.content-wrapper {
+    width: $content-width;
+    background-color: $color-bg-content;
+}
+
+.main-content {
+    padding: $spacing-lg $spacing-xl;
+
+    p {
+        margin-bottom: $spacing-md;
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: $font-size-heading;
+        font-weight: bold;
+        margin: $spacing-lg 0 10px 0;
+        color: #000;
+    }
+}
+
+.anecdotas-grid {
+    display: flex;
+    gap: $spacing-xxl;
+    margin-top: $spacing-md;
+}
+
+.anecdotas-column {
+    flex: 1;
+
+    h5 {
+        margin-bottom: $spacing-sm;
+        font-size: $font-size-base;
+        font-weight: bold;
+
+        a {
+            color: $color-link;
+            text-decoration: none;
+            transition: $transition-base;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.em2 {
+    color: $color-accent;
+    font-weight: normal;
+    font-style: italic;
+}
