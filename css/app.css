@@ -409,8 +409,11 @@ body {
   }
 }
 
-.sidebar {
+#sidebar-container {
   width: 30%;
+}
+
+.sidebar {
   background-color: rgb(16, 14, 27);
   padding: 15px 10px;
 }
