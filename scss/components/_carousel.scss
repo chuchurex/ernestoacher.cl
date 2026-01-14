@@ -2,25 +2,36 @@
 @use '../mixins' as *;
 
 .carousel-container {
-  position: relative;
+  position: absolute;
   z-index: 5;
-  @include flex-center;
-  padding: 0 $spacing-lg;
+  // Positioned in the visual center-left void
+  left: 38%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 400px; // Fixed width for predictable text flow
+  text-align: center;
+  pointer-events: none; // Let clicks pass if needed, or set to auto if interactive
+
+  @include respond-to('lg') {
+    width: 350px;
+    left: 40%;
+  }
 
   @include respond-to('md') {
-    order: -1;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    order: -1; // Show first on mobile
+    width: 100%;
     padding: $spacing-md;
   }
 }
 
 .carousel {
   width: 100%;
-  max-width: 350px;
+  // max-width removed to use container width
   position: relative;
-
-  @include respond-to('lg') {
-    max-width: 280px;
-  }
 }
 
 .carousel-slide {
@@ -39,7 +50,7 @@
     height: auto;
     margin-bottom: $spacing-md;
     border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -57,6 +68,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

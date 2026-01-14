@@ -105,55 +105,40 @@ body {
 }
 
 .main-content {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr;
   position: relative;
-  padding-top: 15%;
-}
-@media (max-width: 992px) {
-  .main-content {
-    grid-template-columns: 1fr 1.5fr 1fr;
-  }
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .main-content {
     display: flex;
     flex-direction: column;
-    padding-top: 20%;
-    gap: 20px;
+    overflow-y: auto;
   }
 }
 
-.ellipse-bg {
+.ellipse-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
-  height: 70%;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at center, #6B1C23 0%, #4A1117 60%, transparent 70%);
-  opacity: 0.9;
-  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  z-index: 0;
   pointer-events: none;
-}
-.ellipse-bg::before {
-  content: "";
-  position: absolute;
-  top: -5%;
-  left: -5%;
-  right: -5%;
-  bottom: -5%;
-  border-radius: 50%;
-  border: 3px solid #6B1C23;
-  opacity: 0.4;
+  transform: translate(-50%, -50%) rotate(-15deg);
 }
 @media (max-width: 768px) {
-  .ellipse-bg {
+  .ellipse-container {
     display: none;
   }
+}
+
+.ellipse-path {
+  fill: #6B1C23;
+  opacity: 0.9;
 }
 
 .site-footer {
@@ -194,118 +179,151 @@ body {
 }
 
 .menu-media, .menu-principal {
-  position: relative;
+  position: absolute;
   z-index: 10;
-  display: flex;
-  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .menu-media ul, .menu-principal ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-@media (max-width: 768px) {
-  .menu-media ul, .menu-principal ul {
-    text-align: center;
-  }
-}
 .menu-media a, .menu-principal a {
   font-family: "Crimson Text", Georgia, serif;
-  color: #ffffff;
-  transition: all 0.2s ease;
-  display: inline-block;
-  padding: 0.2rem 0;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  color: #cccccc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.1rem 0;
 }
-.menu-media a:hover, .menu-principal a:hover {
-  color: #d4d4d4;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+.menu-media a:hover, .menu-principal a:hover, .menu-media a.active, .menu-principal a.active {
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 @media (max-width: 768px) {
   .menu-media, .menu-principal {
-    padding: 15px 20px;
-    justify-content: center;
-  }
-  .menu-media li, .menu-principal li {
+    position: relative;
+    top: auto;
+    left: auto !important;
+    right: auto !important;
+    transform: none;
+    padding: 15px;
     text-align: center;
+  }
+  .menu-media ul, .menu-principal ul {
+    align-items: center;
   }
 }
 
 .menu-principal {
-  padding-left: 5%;
-}
-.menu-principal li {
+  left: 20%;
   text-align: right;
 }
-.menu-principal a {
-  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
-  position: relative;
+.menu-principal li:nth-child(1) {
+  margin-right: 40px;
 }
-.menu-principal a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 1px;
-  background-color: #d4d4d4;
-  transition: width 0.3s ease;
+.menu-principal li:nth-child(2) {
+  margin-right: 25px;
 }
-.menu-principal a:hover::after {
-  width: 100%;
+.menu-principal li:nth-child(3) {
+  margin-right: 15px;
 }
-.menu-principal a.active {
-  color: #d4d4d4;
+.menu-principal li:nth-child(4) {
+  margin-right: 5px;
+}
+.menu-principal li:nth-child(5) {
+  margin-right: 0px;
+}
+.menu-principal li:nth-child(6) {
+  margin-right: 5px;
+}
+.menu-principal li:nth-child(7) {
+  margin-right: 15px;
+}
+.menu-principal li:nth-child(8) {
+  margin-right: 30px;
+}
+.menu-principal li:nth-child(9) {
+  margin-right: 50px;
+}
+.menu-principal li:nth-child(10) {
+  margin-right: 70px;
+}
+.menu-principal li:nth-child(11) {
+  margin-right: 90px;
+}
+@media (max-width: 768px) {
+  .menu-principal li {
+    margin-right: 0 !important;
+  }
 }
 
 .menu-media {
-  justify-content: flex-end;
-  padding-right: 5%;
+  right: 15%;
+  top: 35%;
+  text-align: right;
 }
-.menu-media li {
-  text-align: left;
+.menu-media li:nth-child(1) {
+  margin-right: 60px;
 }
-.menu-media a {
-  font-size: clamp(0.85rem, 1.3vw, 1.15rem);
-  position: relative;
+.menu-media li:nth-child(2) {
+  margin-right: 40px;
 }
-.menu-media a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #d4d4d4;
-  transition: width 0.3s ease;
+.menu-media li:nth-child(3) {
+  margin-right: 20px;
 }
-.menu-media a:hover::after {
-  width: 100%;
+.menu-media li:nth-child(4) {
+  margin-right: 10px;
+}
+.menu-media li:nth-child(5) {
+  margin-right: 5px;
+}
+.menu-media li:nth-child(6) {
+  margin-right: 0px;
+}
+@media (max-width: 768px) {
+  .menu-media {
+    top: auto;
+  }
+  .menu-media li {
+    margin-right: 0 !important;
+  }
 }
 
 .carousel-container {
-  position: relative;
+  position: absolute;
   z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
+  left: 38%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  text-align: center;
+  pointer-events: none;
+}
+@media (max-width: 992px) {
+  .carousel-container {
+    width: 350px;
+    left: 40%;
+  }
 }
 @media (max-width: 768px) {
   .carousel-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     order: -1;
+    width: 100%;
     padding: 15px;
   }
 }
 
 .carousel {
   width: 100%;
-  max-width: 350px;
   position: relative;
-}
-@media (max-width: 992px) {
-  .carousel {
-    max-width: 280px;
-  }
 }
 
 .carousel-slide {
@@ -347,16 +365,17 @@ body {
 }
 .ernesto-photo {
   position: absolute;
-  right: 10%;
-  top: 50%;
+  right: 18%;
+  top: 55%;
   transform: translateY(-50%);
-  z-index: 8;
+  z-index: 2;
   pointer-events: none;
 }
 .ernesto-photo img {
-  max-height: 70vh;
+  max-height: 75vh;
   width: auto;
   filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8));
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 @media (max-width: 1200px) {
   .ernesto-photo {

@@ -4,14 +4,15 @@
  * Carrusel controlado por menú
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // ========== CARRUSEL ==========
     const carousel = {
         container: document.querySelector('.carousel'),
         slides: document.querySelectorAll('.carousel-slide'),
         menuLinks: document.querySelectorAll('.menu-principal a[data-section]'),
-        currentIndex: 0,
+        currentIndex: -1,
         autoPlayInterval: null,
+        introTimeout: null,
         autoPlayDelay: 6000, // 6 segundos
 
         init() {
@@ -37,12 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            // Iniciar auto-play
-            this.startAutoPlay();
+            // Iniciar secuencia de intro (0 -> 1)
+            this.startIntroSequence();
 
             // Pausar en hover del carrusel
             this.container.addEventListener('mouseenter', () => this.pauseAutoPlay());
             this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+        },
+
+        startIntroSequence() {
+            // Estado 0: Todo vacío por defecto
+            // Esperar un momento antes de mostrar el primer slide
+            this.introTimeout = setTimeout(() => {
+                this.goToSlide(0);
+                this.startAutoPlay();
+            }, 3500); // 3.5 segundos de "silencio" inicial
         },
 
         goToSlide(index) {
@@ -85,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(this.autoPlayInterval);
                 this.autoPlayInterval = null;
             }
+            if (this.introTimeout) {
+                clearTimeout(this.introTimeout);
+                this.introTimeout = null;
+            }
         }
     };
 
@@ -123,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const keyboardNav = {
         init() {
             document.addEventListener('keydown', (e) => {
-                switch(e.key) {
+                switch (e.key) {
                     case 'ArrowLeft':
                         carousel.prevSlide();
                         carousel.pauseAutoPlay();
@@ -145,11 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     visualEffects.init();
     keyboardNav.init();
 
-    // Marcar primer link como activo
-    const firstMenuLink = document.querySelector('.menu-principal a[data-section]');
-    if (firstMenuLink) {
-        firstMenuLink.classList.add('active');
-    }
+    // El primer link ya no se marca activo manualmente para respetar el estado inicial vacío
 
     console.log('🎭 Sitio Ernesto Acher cargado');
 });

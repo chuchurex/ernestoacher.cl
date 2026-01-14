@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="site-container">
         <!-- ========== HEADER / LOGO ========== -->
@@ -24,7 +26,35 @@
         <!-- ========== MAIN LAYOUT ========== -->
         <main class="main-content">
             <!-- Elipse decorativa de fondo -->
-            <div class="ellipse-bg"></div>
+            <!-- Elipse decorativa con ancho dinámico (SVG) -->
+            <div class="ellipse-container">
+                <svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet" class="ellipse-svg">
+                    <defs>
+                        <linearGradient id="wineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#800000;stop-opacity:1" /> <!-- Adjust color variable later if needed -->
+                            <stop offset="100%" style="stop-color:#500000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- 
+                        Shape: Variable width ring.
+                        Created by two concentric ellipses with different aspect ratios.
+                        Outer: 450x300
+                        Inner: 420x299
+                        Diff X: 30px (side thickness)
+                        Diff Y: 1px (top/bottom thickness)
+                    -->
+                    <path class="ellipse-path" fill-rule="evenodd" d="M 500 400 
+                             m -450, 0 
+                             a 450,300 0 1,0 900,0 
+                             a 450,300 0 1,0 -900,0 
+                             z
+                             M 500 400 
+                             m -420, 0 
+                             a 420,299 0 1,0 840,0 
+                             a 420,299 0 1,0 -840,0 
+                             z" />
+                </svg>
+            </div>
 
             <!-- Menú Principal (izquierda) -->
             <nav class="menu-principal">
@@ -46,7 +76,7 @@
             <!-- Área Central - Carrusel de Destacados -->
             <section class="carousel-container">
                 <div class="carousel">
-                    <a href="lesluthiers.html" class="carousel-slide active" data-section="lesluthiers" style="text-decoration: none; color: inherit; cursor: pointer;">
+                    <a href="lesluthiers.html" class="carousel-slide" data-section="lesluthiers" style="text-decoration: none; color: inherit; cursor: pointer;">
                         <img src="assets/images/preview-lesluthiers.jpg" alt="Les Luthiers">
                         <p class="carousel-text">Después de muchos años de tironeos y dudas, a principio de 1971 decidí dejar la arquitectura y dedicarme a la música. Los arquitectos aplaudieron y los músicos guardaron respetuoso silencio... Y una increíble cadena de casualidades me llevó a Les Luthiers.</p>
                     </a>
@@ -104,4 +134,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
