@@ -6,7 +6,7 @@
   "scripts": {
     "sass:watch": "sass --watch scss:css --style=expanded --source-map",
     "sass:build": "sass scss:css --style=compressed --no-source-map",
-    "serve": "live-server --port=3000 --watch=css,js,index.html --ignore=scss,node_modules",
+    "serve": "live-server --port=8080 --watch=css,js,index.html --ignore=scss,node_modules",
     "dev": "npm-run-all --parallel sass:watch serve",
     "build": "npm run sass:build"
   },
