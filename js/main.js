@@ -30,12 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     this.startAutoPlay();
                 });
 
-                // Al hacer click, ir a la sección correspondiente
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    this.goToSlide(index);
-                    // Aquí se podría navegar a la página de la sección
-                });
+                // Al hacer click, navegar a la página (comportamiento por defecto del enlace)
             });
 
             // Iniciar secuencia de intro (0 -> 1)
