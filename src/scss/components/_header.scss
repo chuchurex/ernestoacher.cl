@@ -1,0 +1,36 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.site-header {
+    position: absolute;
+    width: 100%;
+    top: 8%; // Floating near the top of the ellipse
+    left: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    pointer-events: none; // Allow clicks through
+
+    @include respond-to('md') {
+        position: relative;
+        top: auto;
+        background: transparent;
+        padding: $spacing-md;
+    }
+}
+
+.logo {
+    font-family: $font-logo;
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: $color-white;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    // transform: rotate(-2deg); // slight organic tilt if desired
+    margin: 0;
+
+    // Add ribbon effect if needed
+}
+
+.logo-ribbon {
+    display: none; // Hide ribbon for now unless requested
+}

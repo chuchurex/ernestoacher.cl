@@ -1,0 +1,18 @@
+<aside class="sidebar">
+    <header class="sidebar-header">
+        <a href="/index.html" class="sidebar-logo-link">
+            <h1 class="sidebar-logo">{{siteName}}</h1>
+        </a>
+        <div class="sidebar-logo-ribbon"></div>
+    </header>
+
+    <nav class="sidebar-nav">
+        <ul id="sidebar-menu">
+            {{#each navigation.sidebar}}
+            <li{{#if (eq ../currentSection this.id)}} class="active"{{/if}}>
+                <a href="{{this.url}}">{{this.label}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </nav>
+</aside>

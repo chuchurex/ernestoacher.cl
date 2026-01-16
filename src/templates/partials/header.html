@@ -1,0 +1,16 @@
+<header class="content-header">
+    <div class="secondary-menu" id="secondary-menu">
+        {{#each navigation.headerSecondary}}
+        <a href="{{this.url}}">{{this.label}}</a>
+        {{/each}}
+    </div>
+
+    <div class="header-menu" id="header-menu">
+        {{#each navigation.headerPrimary}}
+        <a href="{{this.url}}">
+            {{> icon name=this.icon}}
+            {{this.label}}
+        </a>
+        {{/each}}
+    </div>
+</header>
