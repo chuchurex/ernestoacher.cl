@@ -1,0 +1,77 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.carousel-container {
+  position: absolute;
+  z-index: 5;
+  // Positioned in the upper-center visual void
+  left: 42%; // Slightly left of absolute center to balance with Ernesto
+  top: 45%; // Higher up so image is in the "sky" area of ellipse, text flows below
+  transform: translate(-50%, -50%);
+  width: 320px; // Slightly wider than image for padding
+  text-align: center;
+  pointer-events: none;
+
+  @include respond-to('lg') {
+    left: 40%;
+  }
+
+  @include respond-to('md') {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    order: -1;
+  }
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; // Center text below image
+  animation: fadeIn 0.5s ease;
+
+  &.active {
+    display: flex;
+  }
+
+  img {
+    width: 300px;
+    height: 160px;
+    object-fit: cover; // Ensure 300x160 aspect ratio
+    border-radius: 4px;
+    // Glow effect matching wine theme
+    box-shadow: 0 0 15px rgba(107, 28, 35, 0.6);
+    margin-bottom: $spacing-md;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.carousel-text {
+  font-family: $font-body;
+  font-size: clamp(0.7rem, 0.9vw, $text-size);
+  color: $color-text-dim;
+  line-height: 1.5;
+  text-align: center; // Center alignment as per reference look
+  max-width: 300px; // Match image width
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

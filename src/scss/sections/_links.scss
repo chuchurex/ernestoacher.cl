@@ -1,0 +1,37 @@
+// ========================================
+// PÁGINA DE LINKS
+// ========================================
+
+@use '../variables' as *;
+
+.page-links {
+  .links-list {
+    list-style: none;
+    padding: 0;
+    margin: $spacing-lg 0;
+
+    li {
+      margin-bottom: $spacing-md;
+      padding-left: $spacing-md;
+      position: relative;
+
+      &:before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: $color-wine;
+      }
+
+      a {
+        color: $color-wine;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: lighten($color-wine, 15%);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

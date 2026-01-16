@@ -31,9 +31,20 @@
 // 6. PÁGINAS ESPECÍFICAS
 @use 'pages/anecdotario';
 @use 'pages/lesluthiers';
+@use 'pages/banda-elastica';
+@use 'pages/humor-con-achis';
+@use 'pages/veladas';
+@use 'pages/offside';
+@use 'pages/gershwin';
+@use 'pages/animales';
+@use 'pages/detodo';
+@use 'pages/realizaciones';
+@use 'pages/galerias';
+@use 'pages/links';
+@use 'pages/contacto';
 
 // 7. UTILIDADES
 @use 'utilities/helpers';
 
-// 8. BASE ADICIONAL (usando @import porque tiene estilos directos)
-@import 'base';
+// 8. BASE ADICIONAL
+@use 'base';

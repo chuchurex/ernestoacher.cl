@@ -1,0 +1,23 @@
+<div class="site-container">
+    <!-- SIDEBAR -->
+    {{> sidebar}}
+
+    <!-- CONTENT WRAPPER -->
+    <div class="content-wrapper">
+        <!-- HEADER -->
+        {{> header}}
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <div class="content-header-title">
+                <h1>{{pageTitle}}</h1>
+
+                <!-- Menú flotante derecho -->
+                {{> nav-right}}
+            </div>
+
+            <!-- Contenido dinámico -->
+            {{{pageContent}}}
+        </main>
+    </div>
+</div>
