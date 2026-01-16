@@ -1,0 +1,57 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Contenedor del arco: cubre todo el site-container (sidebar + content)
+.site-container {
+  position: relative; // Para que el absolute del arco funcione
+}
+
+.arc-decoration-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px; // Solo altura del header
+  pointer-events: none; // No interfiere con clicks
+  z-index: 5; // Por encima del contenido pero debajo de menús interactivos
+  overflow: hidden; // Ocultar cualquier desbordamiento
+
+  @include respond-to('md') {
+    height: 150px; // En mobile, más compacto
+  }
+}
+
+.arc-decoration-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  @include respond-to('md') {
+    // En mobile simplificar/comprimir el arco
+    transform: scaleY(0.5);
+    transform-origin: top;
+  }
+}
+
+.arc-shape {
+  // Efecto sutil de resplandor tipo solapa de esmoquin
+  filter: drop-shadow(0 0 8px rgba(128, 0, 0, 0.6));
+
+  // Transición suave
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.arc-centerline {
+  // Línea guía invisible (solo para referencia)
+  display: none;
+}
+
+// Variación para diferentes secciones (opcional)
+// Puedes agregar clases al body para cambiar el arco por sección
+body.page-lesluthiers .arc-shape {
+  // Ejemplo: opacity: 0.95;
+}
+
+body.page-labanda .arc-shape {
+  // Ejemplo: fill: url(#arcGradientAlt);
+}

@@ -1,20 +1,39 @@
 {
   "name": "ernestoacher.cl",
-  "version": "1.0.0",
-  "description": "Recreación fiel del sitio web oficial de **Ernesto Acher** (versión 2008), como homenaje a este destacado músico, compositor, director y humorista argentino.",
+  "version": "2.0.0",
+  "description": "Sitio web de Ernesto Acher - Nueva arquitectura modular basada en plantillas",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "sass --watch scss:css --style=expanded --source-map",
-    "sass:build": "sass scss:css --style=compressed --no-source-map",
-    "serve": "live-server --port=8080 --watch=css,js,index.html --ignore=scss,node_modules",
-    "dev": "npm-run-all --parallel sass:watch serve",
-    "build": "npm run sass:build"
+    "clean": "rm -rf public && mkdir -p public",
+    "copy:all": "cp index.html public/ && cp *.html public/ 2>/dev/null || true && cp -r images public/ && cp -r assets public/ && cp -r js public/ && cp -r components public/ && cp -r data public/",
+    "sass:build": "sass scss:public/css --style=compressed --no-source-map",
+    "sass:watch": "sass --watch scss:public/css --style=expanded --source-map",
+    "build": "npm run clean && npm run copy:all && npm run sass:build",
+    "validate": "node scripts/validate-links.js",
+    "dev:sass": "npm run sass:watch",
+    "dev:serve": "cd public && python3 -m http.server 3012",
+    "dev": "./scripts/dev-server.sh",
+    "start": "npm run build && npm run validate",
+    "legacy:sass:watch": "sass --watch scss:css --style=expanded --source-map",
+    "legacy:sass:build": "sass scss:css --style=compressed --no-source-map",
+    "legacy:serve": "live-server --port=3012 --watch=css,js,index.html --ignore=scss,node_modules",
+    "legacy:dev": "npm-run-all --parallel legacy:sass:watch legacy:serve"
   },
-  "keywords": [],
+  "keywords": [
+    "ernesto-acher",
+    "static-site-generator",
+    "handlebars",
+    "sass"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
     "live-server": "^1.2.2",
+    "nodemon": "^3.0.2",
     "npm-run-all": "^4.1.5",
     "sass": "^1.97.2"
   }

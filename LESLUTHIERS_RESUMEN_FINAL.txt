@@ -1,0 +1,208 @@
+═══════════════════════════════════════════════════════════════════════
+  MIGRACIÓN COMPLETA DE LES LUTHIERS - RESUMEN EJECUTIVO
+═══════════════════════════════════════════════════════════════════════
+
+PROYECTO: Extracción y migración de contenido de Les Luthiers
+FECHA: 2026-01-15
+ESTADO: ✓ COMPLETADO EXITOSAMENTE
+
+═══════════════════════════════════════════════════════════════════════
+1. PÁGINAS HTML GENERADAS: 15
+═══════════════════════════════════════════════════════════════════════
+
+Ubicación: /Users/chuchurex/Sites/prod/ernestoacher.cl/lesluthiers/
+
+PÁGINA PRINCIPAL:
+- index.html (Les Luthiers - Comienzo)
+  Contiene la historia del ingreso de Ernesto Acher al grupo
+
+SECCIONES:
+- espectaculos.html (índice con todos los shows)
+- discografia.html (información de discos)
+- fotos.html (galería parte 1 con 21 fotos)
+- fotos2.html (galería parte 2 con 21 fotos)
+- videos.html (referencias a videos)
+
+ESPECTÁCULOS POR AÑO (9 páginas):
+- 1971.html - Opus Pi
+- 1972.html - Recital '72 (Opus Pi II)
+- 1975.html - Recital '75
+- 1976.html - Viejos Fracasos
+- 1977.html - Mastropiero que Nunca
+- 1979.html - Muchas Gracias de Nada
+- 1981.html - Luthierías
+- 1985.html - Humor Dulce Hogar
+- 1986.html - Recital en el Teatro Colón
+
+═══════════════════════════════════════════════════════════════════════
+2. DATOS ESTRUCTURADOS JSON: 16 archivos
+═══════════════════════════════════════════════════════════════════════
+
+Ubicación: /Users/chuchurex/Sites/prod/ernestoacher.cl/data/lesluthiers/
+
+- 15 archivos JSON individuales (uno por cada página)
+- 1 archivo index.json con el índice general y metadatos
+
+Cada archivo JSON contiene:
+  - id: identificador único
+  - source: archivo HTML original
+  - title: título de la página
+  - content: HTML limpio del contenido
+  - images: array de rutas de imágenes
+
+═══════════════════════════════════════════════════════════════════════
+3. IMÁGENES: 108 archivos
+═══════════════════════════════════════════════════════════════════════
+
+Ubicación: /Users/chuchurex/Sites/prod/ernestoacher.cl/images/ll/
+
+Tamaño total: 2.1 MB
+Formato: JPG
+
+Tipos de imágenes incluidas:
+- Fotos históricas de Les Luthiers (100+ fotos)
+- Fotos de conciertos y ensayos
+- Portadas de espectáculos
+- Imágenes de discografía
+- Fotos con músicos invitados
+- Imágenes promocionales
+
+Fuentes de las imágenes:
+- /backup/backup/ll/gfx/ (imágenes específicas de LL)
+- /backup/galerias/fotos/ (fotos de archivo)
+
+═══════════════════════════════════════════════════════════════════════
+4. CONTENIDO TEXTUAL PRESERVADO
+═══════════════════════════════════════════════════════════════════════
+
+✓ Historia completa del ingreso de Ernesto Acher a Les Luthiers
+✓ Relato detallado del debut en Teatro IFT (mayo 1971)
+✓ Anécdota del primer papelón con el piano
+✓ Referencias a la "Cantata de la planificación familiar"
+✓ Mención de todos los integrantes históricos
+✓ Listados completos de temas por espectáculo
+✓ Enlaces de navegación entre páginas
+✓ Todos los acentos y caracteres especiales correctos
+
+═══════════════════════════════════════════════════════════════════════
+5. CARACTERÍSTICAS TÉCNICAS
+═══════════════════════════════════════════════════════════════════════
+
+CONVERSIÓN:
+- Origen: HTML antiguo con tablas, ISO-8859-1
+- Destino: HTML5 moderno, UTF-8
+
+ESTRUCTURA HTML:
+- DOCTYPE: HTML5
+- Encoding: UTF-8
+- Viewport: responsive
+- Semántica: moderna con tags apropiados
+- Componentes: header y sidebar dinámicos
+
+NAVEGACIÓN:
+- Breadcrumbs funcionales
+- Enlaces internos actualizados (.htm → .html)
+- Enlaces entre páginas de espectáculos
+- Navegación a galerías de fotos
+
+IMÁGENES:
+- Rutas actualizadas: ../images/ll/
+- Atributos width/height preservados
+- Clases CSS para alignment
+- 108 imágenes operativas
+
+═══════════════════════════════════════════════════════════════════════
+6. SCRIPT DE PROCESAMIENTO
+═══════════════════════════════════════════════════════════════════════
+
+Ubicación: /Users/chuchurex/Sites/prod/ernestoacher.cl/scripts/
+
+Archivo: process_lesluthiers_v2.py
+
+Funcionalidades:
+- Parser HTML personalizado
+- Extracción inteligente de contenido
+- Filtrado de navegación antigua
+- Conversión de encoding
+- Limpieza de HTML legacy
+- Generación de JSON estructurado
+- Actualización de rutas de imágenes
+- Preservación de formato y estructura
+
+═══════════════════════════════════════════════════════════════════════
+7. ESTRUCTURA DE DIRECTORIOS
+═══════════════════════════════════════════════════════════════════════
+
+/Users/chuchurex/Sites/prod/ernestoacher.cl/
+├── lesluthiers/              (15 páginas HTML)
+│   ├── index.html
+│   ├── espectaculos.html
+│   ├── discografia.html
+│   ├── fotos.html
+│   ├── fotos2.html
+│   ├── videos.html
+│   ├── 1971.html
+│   ├── 1972.html
+│   ├── 1975.html
+│   ├── 1976.html
+│   ├── 1977.html
+│   ├── 1979.html
+│   ├── 1981.html
+│   ├── 1985.html
+│   └── 1986.html
+│
+├── data/lesluthiers/         (16 archivos JSON)
+│   ├── index.json            (índice general)
+│   └── [15 archivos .json]   (datos por página)
+│
+├── images/ll/                (108 imágenes JPG)
+│   └── [fotos y gráficos]
+│
+└── scripts/
+    └── process_lesluthiers_v2.py
+
+═══════════════════════════════════════════════════════════════════════
+8. FUENTES DE DATOS ORIGINALES
+═══════════════════════════════════════════════════════════════════════
+
+HTML antiguo:
+/backup/ll/*.htm (15 archivos procesados)
+
+Imágenes originales:
+/backup/backup/ll/gfx/ (imágenes base)
+/backup/galerias/fotos/ (fotos de archivo)
+
+═══════════════════════════════════════════════════════════════════════
+9. PRÓXIMOS PASOS RECOMENDADOS
+═══════════════════════════════════════════════════════════════════════
+
+1. Revisar el contenido de cada página en navegador
+2. Agregar estilos CSS para galerías de fotos
+3. Implementar lightbox para visualización de imágenes
+4. Agregar página de Les Luthiers al menú principal
+5. Optimizar imágenes (considerar WebP)
+6. Agregar metadata adicional (Open Graph, Twitter Cards)
+7. Crear páginas para años faltantes si hay contenido
+
+═══════════════════════════════════════════════════════════════════════
+10. RESUMEN ESTADÍSTICO
+═══════════════════════════════════════════════════════════════════════
+
+Archivos HTML generados:     15
+Archivos JSON generados:      16 (15 + índice)
+Imágenes copiadas:           108 (2.1 MB)
+Páginas de espectáculos:       9
+Galerías de fotos:             2 (42 imágenes total)
+
+Conversión de encoding:     ISO-8859-1 → UTF-8
+Formato HTML:               Tablas → HTML5 semántico
+Navegación:                 Enlaces actualizados
+Rutas de imágenes:          Todas corregidas
+
+═══════════════════════════════════════════════════════════════════════
+
+ESTADO FINAL: ✓ MIGRACIÓN COMPLETA Y EXITOSA
+
+Todos los archivos están listos para integración en el sitio web.
+
+═══════════════════════════════════════════════════════════════════════

@@ -1,0 +1,55 @@
+// ============================================
+// Veladas Espeluznantes
+// ============================================
+
+.page-veladas {
+  // Estilos específicos para la sección Veladas Espeluznantes
+
+  .section-content {
+    h2 {
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .content-image-right {
+      float: right;
+      margin: 0 0 1rem 1.5rem;
+      max-width: 240px;
+      height: auto;
+    }
+  }
+
+  // Galería de fotos
+  .photo-gallery {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    .photo-item {
+      img {
+        border: 1px solid #ddd;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    .section-content {
+      .content-image-right {
+        float: none;
+        margin: 0 auto 1.5rem;
+        display: block;
+      }
+    }
+
+    .photo-gallery {
+      justify-content: center;
+    }
+  }
+}
