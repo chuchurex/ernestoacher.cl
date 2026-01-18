@@ -200,6 +200,51 @@ class SiteBuilder {
   }
 
   // Construir homepage
+  // Construir página simple sin submenú (para páginas del menú media)
+  async buildSimplePage(pageId) {
+    try {
+      const sectionData = require(`../src/data/sections/${pageId}.json`);
+
+      // Leer contenido HTML
+      const contentPath = path.join(__dirname, `../src/content/${pageId}.html`);
+      let pageContent = '';
+
+      if (await fs.pathExists(contentPath)) {
+        pageContent = await fs.readFile(contentPath, 'utf8');
+      } else {
+        console.log(chalk.yellow(`  ⚠ No se encontró contenido para ${pageId}`));
+        pageContent = `<p>Contenido en construcción...</p>`;
+      }
+
+      // Renderizar contenido interior (sin submenú)
+      const interiorContent = this.templates.interior({
+        siteName: this.siteData.siteName,
+        pageTitle: sectionData.title,
+        currentSection: pageId,
+        navigation: this.navigation,
+        pageContent: pageContent,
+        subNavItems: [] // Sin submenú
+      });
+
+      // Renderizar página completa
+      const fullHtml = this.templates.base({
+        siteName: this.siteData.siteName,
+        pageTitle: sectionData.title,
+        bodyClass: sectionData.bodyClass,
+        meta: sectionData.meta,
+        content: interiorContent
+      });
+
+      // Guardar archivo
+      const outputPath = path.join(__dirname, `../public/${pageId}.html`);
+      await fs.writeFile(outputPath, fullHtml);
+
+      console.log(chalk.green(`  ✓ Generada: ${pageId}.html`));
+    } catch (error) {
+      console.error(chalk.red(`  ✗ Error construyendo ${pageId}:`), error.message);
+    }
+  }
+
   async buildHomePage() {
     try {
       const homeData = this.siteData.homePage;
@@ -246,6 +291,12 @@ class SiteBuilder {
       for (const subPage of subPagesToGenerate) {
         await this.buildSubPage(section.id, subPage);
       }
+    }
+
+    // Construir páginas del menú media (homepage)
+    const menuMediaPages = ['galerias', 'discografia', 'anecdotario-modular', 'partituras', 'links', 'contacto'];
+    for (const pageId of menuMediaPages) {
+      await this.buildSimplePage(pageId);
     }
 
     console.log(chalk.bold.green('\n✅ Build completado exitosamente\n'));
