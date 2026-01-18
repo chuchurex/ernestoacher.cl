@@ -4,74 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Menú de conciertos - Ernesto Acher">
+    <meta name="keywords" content="menú, conciertos, repertorio, Ernesto Acher">
     <title>Menú de conciertos - Ernesto Acher</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class="page-simple">
+<body class="page-menu-conciertos">
     <div class="site-container">
-        <div id="sidebar-container"></div>
-        <div class="content-wrapper">
-            <div id="header-container"></div>
-            <main class="main-content">
-                <div class="content-header-title">
-                    <h1>Menú de conciertos</h1>
-                </div>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <a href="/index.html" class="sidebar-logo-link">
+                <h1 class="sidebar-logo">Ernesto Acher</h1>
+            </a>
+            <div class="sidebar-logo-ribbon"></div>
+        </header>
+    
+        <nav class="sidebar-nav">
+            <ul id="sidebar-menu">
+                <li>
+                    <a href="/lesluthiers.html">Les Luthiers</a>
+                </li>
+                <li>
+                    <a href="/labandaelastica.html">La Banda Elástica</a>
+                </li>
+                <li>
+                    <a href="/humorconachis.html">Unipersonal</a>
+                </li>
+                <li>
+                    <a href="/veladas.html">Conciertos de música humor</a>
+                </li>
+                <li>
+                    <a href="/offside.html">Offside Chamber Orchestra</a>
+                </li>
+                <li>
+                    <a href="/gershwin.html">Homenaje a Gershwin</a>
+                </li>
+                <li>
+                    <a href="/animales.html">Los animales de la música</a>
+                </li>
+                <li>
+                    <a href="/detodo.html">De todo como en botica</a>
+                </li>
+                <li>
+                    <a href="/realizaciones.html">Realizaciones recientes</a>
+                </li>
+                <li>
+                    <a href="/proyectos.html">Nuevos proyectos</a>
+                </li>
+                <li class="active">
+                    <a href="/menuconciertos.html">Menú de conciertos</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-                <p>Si bien he hecho algunos programas de tipo tradicional, siempre me he sentido inclinado a los programas "temáticos", configurándolos en base a género, a temas, a edades o a alguna idea directriz en particular. Y tengo este menú para ofrecer:</p>
+    <!-- CONTENT WRAPPER -->
+    <div class="content-wrapper">
+        <!-- HEADER -->
+        <header class="content-header">
+            <div class="secondary-menu" id="secondary-menu">
+                <a href="/discografia.html">Discografía</a>
+                <a href="/anecdotario.html">Anecdotario</a>
+                <a href="/partituras.html">Partituras</a>
+                <a href="/galerias.html">Galerías</a>
+            </div>
+        
+            <div class="header-menu" id="header-menu">
+                <a href="/index.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    Inicio
+                </a>
+                <a href="/links.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="10 7 17 7 17 14"/>
+                    </svg>
+                    Links
+                </a>
+                <a href="/actualizaciones.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 4 23 10 17 10"/>
+                        <polyline points="1 20 1 14 7 14"/>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                    Actualizaciones
+                </a>
+                <a href="/mapa.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="2" width="6" height="4"/>
+                        <line x1="12" y1="6" x2="12" y2="10"/>
+                        <line x1="4" y1="10" x2="20" y2="10"/>
+                        <line x1="5" y1="10" x2="5" y2="14"/>
+                        <line x1="12" y1="10" x2="12" y2="14"/>
+                        <line x1="19" y1="10" x2="19" y2="14"/>
+                        <rect x="2" y="14" width="6" height="4"/>
+                        <rect x="9" y="14" width="6" height="4"/>
+                        <rect x="16" y="14" width="6" height="4"/>
+                    </svg>
+                    Mapa del sitio
+                </a>
+                <a href="/contacto.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Contacto
+                </a>
+            </div>
+        </header>
 
-                <h2>PROGRAMAS SINFONICOS</h2>
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <div class="content-header-title">
+                <h1>Menú de conciertos</h1>
 
-                <h5><strong>Acher en serio?</strong></h5>
-                <h5>(para ensamble de cuerdas)</h5>
-                <h5>• Retrato de Jobim (A.C.Jobim)</h5>
-                <p>(arreglo para cuarteto de cuerdas)</p>
-                <p>-Retrato em branco e preto<br>
-                -Olha María<br>
-                -Wave</p>
-                <h5>• Intermezzo (F.Schreker)</h5>
-                <h5>• Cuatro estaciones porteñas (A.Piazzolla)</h5>
-                <p>(arreglo para octeto de cuerdas)</p>
-                <h5>• Metamorfosis (R.Strauss)</h5>
-                <p>(reducción para octeto de cuerdas)</p>
+                <!-- Menú flotante derecho -->
+                <nav class="page-nav-right">
+                    <ul>
+                        <li class="active">
+                            - Comienzo
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
-                <h5><strong>Veladas espeluznantes I</strong> (Música humor)</h5>
-                <h5><u>Primera parte</u></h5>
-                <h5>• Obertura<br>
-                • Bésame Schumann (broma musical)<br>
-                (piano y orquesta)<br>
-                • Rhapsody in blue (G.Gershwin)<br>
-                (piano y orquesta)</h5>
-                <h5><u>Segunda parte</u></h5>
-                <h5>• Ensayo con público<br>
-                • Hello Strauss! (broma musical)<br>
-                • Peer Gynt Panther (broma musical)<br>
-                • 40 choclos (broma musical)<br>
-                • Pequeña música hebrea (broma musical)<br>
-                • Tritsch-tratsch polka (broma musical)<br>
-                • El escondite de Brahms (broma musical)</h5>
+            <!-- Contenido dinámico -->
+            <p>Si bien he hecho algunos programas de tipo tradicional, siempre me he sentido inclinado a los programas "temáticos", configurándolos en base a género, a temas, a edades o a alguna idea directriz en particular. Y tengo este menú para ofrecer:</p>
 
-                <h5><strong>Veladas espeluznantes II</strong> (Música humor)</h5>
-                <h5><u>Primera parte</u></h5>
-                <h5>• Obertura<br>
-                • Teresa y el Oso (para relator y orquesta)<br>
-                (cuento sinfónico - Les Luthiers)</h5>
-                <h5><u>Segunda parte</u></h5>
-                <h5>• Hello Strauss! (broma musical)<br>
-                • Happy Verdi (broma musical)<br>
-                • La gran puerta de Avignon (broma musical)<br>
-                • 40 choclos (broma musical)<br>
-                • Hi Lili, hi Ludwig! (broma musical)<br>
-                • Pequeña música hebrea (broma musical)<br>
-                • El escondite de Brahms (broma musical)</h5>
+<h2>PROGRAMAS SINFONICOS</h2>
 
-                <h5><strong>Gershwin, el hombre que amamos</strong><br>
-                (Trío de jazz de Jorge Navarro y orquesta sinfónica)</h5>
+<h5><strong>Acher en serio?</strong></h5>
+<h5>(para ensamble de cuerdas)</h5>
+<h5>• Retrato de Jobim (A.C.Jobim)</h5>
+<p>(arreglo para cuarteto de cuerdas)</p>
+<p>-Retrato em branco e preto<br>
+-Olha María<br>
+-Wave</p>
+<h5>• Intermezzo (F.Schreker)</h5>
+<h5>• Cuatro estaciones porteñas (A.Piazzolla)</h5>
+<p>(arreglo para octeto de cuerdas)</p>
+<h5>• Metamorfosis (R.Strauss)</h5>
+<p>(reducción para octeto de cuerdas)</p>
 
-                <h5><strong>Los animales de la música</strong> (concierto para niños)<br>
-                Solista de flauta y relator: Jorge de la Vega</h5>
-            </main>
-        </div>
+<h5><strong>Veladas espeluznantes I</strong> (Música humor)</h5>
+<h5><u>Primera parte</u></h5>
+<h5>• Obertura<br>
+• Bésame Schumann (broma musical)<br>
+(piano y orquesta)<br>
+• Rhapsody in blue (G.Gershwin)<br>
+(piano y orquesta)</h5>
+<h5><u>Segunda parte</u></h5>
+<h5>• Ensayo con público<br>
+• Hello Strauss! (broma musical)<br>
+• Peer Gynt Panther (broma musical)<br>
+• 40 choclos (broma musical)<br>
+• Pequeña música hebrea (broma musical)<br>
+• Tritsch-tratsch polka (broma musical)<br>
+• El escondite de Brahms (broma musical)</h5>
+
+<h5><strong>Veladas espeluznantes II</strong> (Música humor)</h5>
+<h5><u>Primera parte</u></h5>
+<h5>• Obertura<br>
+• Teresa y el Oso (para relator y orquesta)<br>
+(cuento sinfónico - Les Luthiers)</h5>
+<h5><u>Segunda parte</u></h5>
+<h5>• Hello Strauss! (broma musical)<br>
+• Happy Verdi (broma musical)<br>
+• La gran puerta de Avignon (broma musical)<br>
+• 40 choclos (broma musical)<br>
+• Hi Lili, hi Ludwig! (broma musical)<br>
+• Pequeña música hebrea (broma musical)<br>
+• El escondite de Brahms (broma musical)</h5>
+
+<h5><strong>Gershwin, el hombre que amamos</strong><br>
+(Trío de jazz de Jorge Navarro y orquesta sinfónica)</h5>
+
+<h5><strong>Los animales de la música</strong> (concierto para niños)<br>
+Solista de flauta y relator: Jorge de la Vega</h5>
+
+        </main>
     </div>
-    <script src="js/components.js"></script>
+</div>
+
 </body>
 </html>
