@@ -1,0 +1,77 @@
+{
+  "siteName": "Ernesto Acher",
+  "baseUrl": "/",
+  "meta": {
+    "description": "Sitio oficial de Ernesto Acher - Músico, compositor, director y humorista argentino",
+    "keywords": "Ernesto Acher, Les Luthiers, La Banda Elástica, música humor, Argentina",
+    "author": "Ernesto Acher"
+  },
+  "homePage": {
+    "enabled": true,
+    "useCustomLayout": true,
+    "carousel": [
+      {
+        "id": "lesluthiers",
+        "title": "Les Luthiers",
+        "image": "/images/carousel/ll.jpg",
+        "url": "/lesluthiers.html",
+        "text": "Después de muchos años de tironeos y dudas, a principio de 1971 decidí dejar la arquitectura y dedicarme a la música. Los arquitectos aplaudieron y los músicos guardaron respetuoso silencio... Y una increíble cadena de casualidades me llevó a Les Luthiers."
+      },
+      {
+        "id": "labanda",
+        "title": "La Banda Elástica",
+        "image": "/images/carousel/lbe.jpg",
+        "url": "/labandaelastica.html",
+        "text": "En el verano de 1987, después de mucho tiempo me reencontré con Jorge Navarro y a fines de ese año, tomando café en su casa, le propuse armar un grupo con su trío como base y algunos amigos del ambiente de jazz. Quién iba a imaginar que en ese café nacía la Banda?..."
+      },
+      {
+        "id": "unipersonal",
+        "title": "Unipersonal",
+        "image": "/images/carousel/hca.jpg",
+        "url": "/humorconachis.html",
+        "text": "A fines de 1992 fui con cierta frecuencia a un simpático pub del barrio de Belgrano que se llamaba \"Merlyn\". Tomando café con los dueños, en marzo del '93, me preguntaron si no tenía ganas de hacer alguna presentación. Una? Hice un montón y durante muchos años..."
+      },
+      {
+        "id": "conciertos",
+        "title": "Conciertos de música humor",
+        "image": "/images/carousel/ve.jpg",
+        "url": "/veladas.html",
+        "text": "La historia de las \"Veladas\" es en realidad la confluencia de dos cosas: \"Juegos\", un disco de bromas y juegos musicales, y una invitación de Hugo Vitantonio para hacer esas bromas en vivo con la Sinfónica de Rosario."
+      },
+      {
+        "id": "offside",
+        "title": "Offside Chamber Orchestra",
+        "image": "/images/carousel/ocho.jpg",
+        "url": "/offside.html",
+        "text": "Cuando tuve que ponerme a aprender a toda máquina como demonios se hacía para \"mover\" una orquesta y poder dirigir la primera versión de las \"Veladas\" se me ocurrió armar un \"octeto de entrenamiento\" y ahí me picó el bichito de hacer música sinfónica \"cambiada de escala\"."
+      },
+      {
+        "id": "gershwin",
+        "title": "Homenaje a Gershwin",
+        "image": "/images/carousel/hg.jpg",
+        "url": "/gershwin.html",
+        "text": "En una visita de Lalo Schifrin a Buenos Aires, en 1997, me encontré con Baby López Furst y Jorge Navarro, a quienes hacía un tiempo que no veía. A partir de ese encuentro, la confluencia hacia lo que fue el homenaje a Gershwin fue casi mágica."
+      },
+      {
+        "id": "animales",
+        "title": "Los animales de la música",
+        "image": "/images/carousel/ladm.jpg",
+        "url": "/animales.html",
+        "text": "Después de la experiencia con el \"Colón Opera Concerto\", Jorge de la Vega y yo quedamos con ganas de hacer algún otro proyecto y café va, café viene, en la esquina de Canning y Cabello, nos pusimos a delirar un concierto para chicos basado en música \"de animalitos\"."
+      }
+    ],
+    "ernestoPhoto": "/assets/images/ernesto-acher.png",
+    "menuMedia": [
+      { "label": "Discografía", "url": "/discografia.html" },
+      { "label": "Anecdotario", "url": "/anecdotario-modular.html" },
+      { "label": "Partituras", "url": "/partituras.html" },
+      { "label": "Links", "url": "/links.html" },
+      { "label": "Galerías", "url": "/galerias.html" },
+      { "label": "Contacto", "url": "/contacto.html" }
+    ],
+    "footer": {
+      "updateText": "ACTUALIZADO: 18 DE SEPTIEMBRE",
+      "archiveText": "Escribenos hay más clic?"
+    }
+  }
+}

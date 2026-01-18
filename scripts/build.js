@@ -53,6 +53,13 @@ class SiteBuilder {
       );
       this.templates.interior = Handlebars.compile(interiorTemplate);
       console.log(chalk.gray('  ✓ Plantilla interior cargada'));
+
+      const homeTemplate = await fs.readFile(
+        path.join(__dirname, '../src/templates/page-home.html'),
+        'utf8'
+      );
+      this.templates.home = Handlebars.compile(homeTemplate);
+      console.log(chalk.gray('  ✓ Plantilla home cargada'));
     } catch (error) {
       console.error(chalk.red('  ✗ Error cargando plantillas:', error.message));
       throw error;
@@ -125,6 +132,30 @@ class SiteBuilder {
     }
   }
 
+  // Construir homepage
+  async buildHomePage() {
+    try {
+      const homeData = this.siteData.homePage;
+
+      const homeHtml = this.templates.home({
+        siteName: this.siteData.siteName,
+        meta: this.siteData.meta,
+        navigation: this.navigation,
+        carousel: homeData.carousel,
+        ernestoPhoto: homeData.ernestoPhoto,
+        menuMedia: homeData.menuMedia,
+        footer: homeData.footer
+      });
+
+      const outputPath = path.join(__dirname, '../public/index.html');
+      await fs.writeFile(outputPath, homeHtml);
+
+      console.log(chalk.green('  ✓ Generada: index.html'));
+    } catch (error) {
+      console.error(chalk.red('  ✗ Error construyendo homepage:'), error.message);
+    }
+  }
+
   // Construir todas las páginas
   async buildAll() {
     console.log(chalk.bold.blue('\n🚀 INICIANDO BUILD DEL SITIO\n'));
@@ -134,6 +165,9 @@ class SiteBuilder {
     await this.registerTemplates();
 
     console.log(chalk.blue('\n📄 Generando páginas...'));
+
+    // Construir homepage
+    await this.buildHomePage();
 
     // Construir cada sección del sidebar
     for (const section of this.navigation.sidebar) {

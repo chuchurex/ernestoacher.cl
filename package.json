@@ -9,7 +9,7 @@
     "sass:build": "sass scss:public/css --style=compressed --no-source-map",
     "sass:watch": "sass --watch scss:public/css --style=expanded --source-map",
     "build": "npm run clean && npm run copy:all && npm run sass:build",
-    "build:templates": "node scripts/build.js && npm run sass:build && cp index.html public/ && cp -r components public/ && cp -r data public/",
+    "build:templates": "node scripts/build.js && npm run sass:build && cp -r components public/ && cp -r data public/",
     "validate": "node scripts/validate-links.js",
     "dev:sass": "npm run sass:watch",
     "dev:serve": "cd public && python3 -m http.server 3012",
