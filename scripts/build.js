@@ -132,6 +132,73 @@ class SiteBuilder {
     }
   }
 
+  // Construir una subpágina
+  async buildSubPage(sectionId, subPage) {
+    try {
+      // Cargar datos de la sección
+      const sectionData = require(`../src/data/sections/${sectionId}.json`);
+
+      // Encontrar la sección en navegación
+      const navSection = this.navigation.sidebar.find(s => s.id === sectionId);
+      if (!navSection) {
+        console.error(chalk.red(`  ✗ Sección no encontrada: ${sectionId}`));
+        return;
+      }
+
+      // Determinar la ruta del contenido
+      const subPageSlug = subPage.url.split('/').pop().replace('.html', '');
+      const contentPath = path.join(__dirname, `../src/content/${sectionId}/${subPageSlug}.html`);
+
+      let pageContent = '';
+      if (await fs.pathExists(contentPath)) {
+        pageContent = await fs.readFile(contentPath, 'utf8');
+      } else {
+        console.log(chalk.yellow(`  ⚠ No se encontró contenido para ${sectionId}/${subPageSlug}`));
+        pageContent = `<p>Contenido en construcción...</p>`;
+      }
+
+      // Preparar menú flotante derecho con la subpágina activa
+      const subNavItems = navSection.subPages.map(sp => ({
+        label: sp.label,
+        url: sp.default ? null : sp.url,
+        active: sp.url === subPage.url
+      }));
+
+      // Renderizar contenido interior
+      const interiorContent = this.templates.interior({
+        siteName: this.siteData.siteName,
+        pageTitle: `${subPage.label} - ${sectionData.title}`,
+        currentSection: sectionId,
+        navigation: this.navigation,
+        pageContent: pageContent,
+        subNavItems: subNavItems
+      });
+
+      // Renderizar página completa con plantilla base
+      const fullHtml = this.templates.base({
+        siteName: this.siteData.siteName,
+        pageTitle: `${subPage.label} - ${sectionData.title}`,
+        bodyClass: sectionData.bodyClass,
+        meta: sectionData.meta,
+        content: interiorContent
+      });
+
+      // Determinar archivo de salida
+      const outputFileName = subPage.url.replace(/^\//, '');
+      const outputPath = path.join(__dirname, '../public', outputFileName);
+
+      // Asegurar que el directorio existe
+      await fs.ensureDir(path.dirname(outputPath));
+
+      // Escribir archivo
+      await fs.writeFile(outputPath, fullHtml);
+
+      console.log(chalk.green(`  ✓ Generada: ${outputFileName}`));
+    } catch (error) {
+      console.error(chalk.red(`  ✗ Error construyendo subpágina ${sectionId}/${subPage.label}:`), error.message);
+    }
+  }
+
   // Construir homepage
   async buildHomePage() {
     try {
@@ -169,9 +236,16 @@ class SiteBuilder {
     // Construir homepage
     await this.buildHomePage();
 
-    // Construir cada sección del sidebar
+    // Construir cada sección del sidebar y sus subpáginas
     for (const section of this.navigation.sidebar) {
+      // Construir página principal
       await this.buildPage(section.id);
+
+      // Construir subpáginas (excepto la default)
+      const subPagesToGenerate = section.subPages.filter(sp => !sp.default);
+      for (const subPage of subPagesToGenerate) {
+        await this.buildSubPage(section.id, subPage);
+      }
     }
 
     console.log(chalk.bold.green('\n✅ Build completado exitosamente\n'));
