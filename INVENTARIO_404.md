@@ -1,8 +1,8 @@
 # 📊 INVENTARIO DE PÁGINAS 404
 
-**Fecha**: Sun Jan 18 02:50:45 -03 2026
+**Fecha**: Sun Jan 18 03:55:11 -03 2026
 
-**Total de enlaces rotos únicos**: 30
+**Total de enlaces rotos únicos**: 39
 
 **Enlaces relativos (sin /)**: 47
 
@@ -34,20 +34,27 @@
 
 
 ## ROOT
-**Total**: 11 páginas
-**Existen en archive**: 8/11
+**Total**: 20 páginas
+**Existen en archive**: 17/20
 
 1. ❌ FALTA `/actualizaciones.html`
-2. ✅ EXISTE `/anecdotario.html`
-3. ❌ FALTA `/gershwin-fotos.html`
-4. ✅ EXISTE `/humorconachis-fotos.html`
-5. ✅ EXISTE `/labandaelastica-discografia.html`
-6. ✅ EXISTE `/labandaelastica-fotos.html`
-7. ✅ EXISTE `/lesluthiers-discografia.html`
-8. ✅ EXISTE `/lesluthiers-fotos.html`
-9. ❌ FALTA `/mapa.html`
-10. ✅ EXISTE `/offside-fotos.html`
-11. ✅ EXISTE `/veladas-fotos.html`
+2. ❌ FALTA `/gershwin-fotos.html`
+3. ✅ EXISTE `/humorconachis-santiago.html`
+4. ✅ EXISTE `/labandaelastica-audio.html`
+5. ✅ EXISTE `/labandaelastica-disco1.html`
+6. ✅ EXISTE `/labandaelastica-disco2.html`
+7. ✅ EXISTE `/labandaelastica-disco3.html`
+8. ✅ EXISTE `/labandaelastica-espectaculos.html`
+9. ✅ EXISTE `/labandaelastica-videos.html`
+10. ✅ EXISTE `/lesluthiers-disco2.html`
+11. ✅ EXISTE `/lesluthiers-disco3.html`
+12. ✅ EXISTE `/lesluthiers-disco4.html`
+13. ✅ EXISTE `/lesluthiers-disco5.html`
+14. ✅ EXISTE `/lesluthiers-disco6.html`
+15. ✅ EXISTE `/lesluthiers-disco7.html`
+
+*... y 5 páginas más*
+
 
 ## ENLACES RELATIVOS (SIN /)
 **Total**: 47 enlaces
@@ -73,5 +80,5 @@
 
 | Categoría | Páginas | En Archive | Prioridad | Acción |
 |-----------|---------|------------|-----------|--------|
+| root | 20 | 17 | ALTA | ✅ Migrar |
 | anecdotas | 19 | 0 | MEDIA | ✅ Migrar en batch |
-| root | 11 | 8 | ALTA | ✅ Migrar |
