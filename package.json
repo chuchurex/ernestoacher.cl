@@ -7,7 +7,7 @@
     "clean": "rm -rf public && mkdir -p public",
     "sass:build": "sass scss:public/css --style=compressed --no-source-map",
     "sass:watch": "sass --watch scss:public/css --style=expanded --source-map",
-    "build": "node scripts/build.js && npm run sass:build && cp -r components public/ && cp -r data public/",
+    "build": "node scripts/build.js && npm run sass:build && cp -r images public/ && cp -r assets public/ && cp -r galerias public/ && cp -r js public/ && cp -r components public/ && cp -r data public/",
     "validate": "node scripts/validate-links.js",
     "dev:serve": "cd public && python3 -m http.server 3012",
     "dev": "npm run build && npm run dev:serve",
