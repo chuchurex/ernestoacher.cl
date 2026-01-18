@@ -17,6 +17,7 @@ monitor_galerias.sh
 backup/
 content/
 data/
+!src/content/
 
 # Logs
 *.log
