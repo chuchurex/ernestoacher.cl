@@ -1,0 +1,136 @@
+{
+  "sidebar": [
+    {
+      "id": "lesluthiers",
+      "label": "Les Luthiers",
+      "url": "/lesluthiers.html",
+      "headerImage": "/images/headers/ll-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/lesluthiers.html", "default": true },
+        { "label": "Espectáculos", "url": "/lesluthiers/espectaculos.html" },
+        { "label": "Discografía", "url": "/lesluthiers/discografia.html" },
+        { "label": "Fotos", "url": "/lesluthiers/fotos.html" },
+        { "label": "Videos", "url": "/lesluthiers/videos.html" }
+      ]
+    },
+    {
+      "id": "labanda",
+      "label": "La Banda Elástica",
+      "url": "/labandaelastica.html",
+      "headerImage": "/images/headers/lbe-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/labandaelastica.html", "default": true },
+        { "label": "Espectáculos", "url": "/labandaelastica/espectaculos.html" },
+        { "label": "Discografía", "url": "/labandaelastica/discografia.html" },
+        { "label": "Fotos", "url": "/labandaelastica/fotos.html" },
+        { "label": "Videos", "url": "/labandaelastica/videos.html" },
+        { "label": "Audio", "url": "/labandaelastica/audio.html" }
+      ]
+    },
+    {
+      "id": "unipersonal",
+      "label": "Unipersonal",
+      "url": "/humorconachis.html",
+      "headerImage": "/images/headers/hca-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/humorconachis.html", "default": true },
+        { "label": "Fotos", "url": "/humorconachis/fotos.html" },
+        { "label": "Santiago", "url": "/humorconachis/santiago.html" }
+      ]
+    },
+    {
+      "id": "conciertos",
+      "label": "Conciertos de música humor",
+      "url": "/veladas.html",
+      "headerImage": "/images/headers/ve-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/veladas.html", "default": true },
+        { "label": "Bromas/Juegos", "url": "/veladas/bromas.html" },
+        { "label": "Videos", "url": "/veladas/videos.html" },
+        { "label": "Fotos", "url": "/veladas/fotos.html" }
+      ]
+    },
+    {
+      "id": "offside",
+      "label": "Offside Chamber Orchestra",
+      "url": "/offside.html",
+      "headerImage": "/images/headers/ocho-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/offside.html", "default": true },
+        { "label": "Fotos", "url": "/offside/fotos.html" }
+      ]
+    },
+    {
+      "id": "gershwin",
+      "label": "Homenaje a Gershwin",
+      "url": "/gershwin.html",
+      "headerImage": "/images/headers/hg-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/gershwin.html", "default": true }
+      ]
+    },
+    {
+      "id": "animales",
+      "label": "Los animales de la música",
+      "url": "/animales.html",
+      "headerImage": "/images/headers/ladm-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/animales.html", "default": true },
+        { "label": "Videos", "url": "/animales/videos.html" }
+      ]
+    },
+    {
+      "id": "detodo",
+      "label": "De todo como en botica",
+      "url": "/detodo.html",
+      "headerImage": "/images/headers/detodo-header.jpg",
+      "subPages": [
+        { "label": "Índice", "url": "/detodo.html", "default": true },
+        { "label": "Juntos en concierto", "url": "/detodo/juntos.html" },
+        { "label": "Quinteto Maderas", "url": "/detodo/qm.html" },
+        { "label": "Había una vez un país", "url": "/detodo/habia.html" }
+      ]
+    },
+    {
+      "id": "realizaciones",
+      "label": "Realizaciones recientes",
+      "url": "/realizaciones.html",
+      "headerImage": "/images/headers/realizaciones-header.jpg",
+      "subPages": [
+        { "label": "Índice", "url": "/realizaciones.html", "default": true },
+        { "label": "La orquesta va al colegio", "url": "/realizaciones/colegio.html" }
+      ]
+    },
+    {
+      "id": "nuevos",
+      "label": "Nuevos proyectos",
+      "url": "/proyectos.html",
+      "headerImage": "/images/headers/proyectos-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/proyectos.html", "default": true }
+      ]
+    },
+    {
+      "id": "menuconciertos",
+      "label": "Menú de conciertos",
+      "url": "/menuconciertos.html",
+      "headerImage": "/images/headers/menuconciertos-header.jpg",
+      "subPages": [
+        { "label": "Comienzo", "url": "/menuconciertos.html", "default": true }
+      ]
+    }
+  ],
+  "headerPrimary": [
+    { "id": "inicio", "label": "Inicio", "url": "/index.html", "icon": "home" },
+    { "id": "links", "label": "Links", "url": "/links.html", "icon": "link" },
+    { "id": "actualizaciones", "label": "Actualizaciones", "url": "/actualizaciones.html", "icon": "refresh" },
+    { "id": "mapa", "label": "Mapa del sitio", "url": "/mapa.html", "icon": "sitemap" },
+    { "id": "contacto", "label": "Contacto", "url": "/contacto.html", "icon": "mail" }
+  ],
+  "headerSecondary": [
+    { "id": "discografia", "label": "Discografía", "url": "/discografia.html" },
+    { "id": "anecdotario", "label": "Anecdotario", "url": "/anecdotario.html" },
+    { "id": "partituras", "label": "Partituras", "url": "/partituras.html" },
+    { "id": "galerias", "label": "Galerías", "url": "/galerias.html" }
+  ]
+}
