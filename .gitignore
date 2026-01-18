@@ -18,6 +18,7 @@ backup/
 content/
 data/
 !src/content/
+!src/data/
 
 # Logs
 *.log
