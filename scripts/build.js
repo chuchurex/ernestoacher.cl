@@ -299,6 +299,21 @@ class SiteBuilder {
       await this.buildSimplePage(pageId);
     }
 
+    // Construir páginas adicionales (alternativas/especiales)
+    const additionalPages = [
+      'anecdotario',
+      'humorconachis-fotos',
+      'labandaelastica-discografia',
+      'labandaelastica-fotos',
+      'lesluthiers-discografia',
+      'lesluthiers-fotos',
+      'offside-fotos',
+      'veladas-fotos'
+    ];
+    for (const pageId of additionalPages) {
+      await this.buildSimplePage(pageId);
+    }
+
     console.log(chalk.bold.green('\n✅ Build completado exitosamente\n'));
   }
 

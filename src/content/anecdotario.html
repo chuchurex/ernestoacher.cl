@@ -1,0 +1,38 @@
+<a href="/index.html" class="back-link">← Volver al inicio</a>
+
+<div class="anecdotario-header">
+    <h1>Anecdotario</h1>
+    <p>Historias y anécdotas de la carrera de Ernesto Acher</p>
+</div>
+
+<div class="anecdotas-grid" id="anecdotasContainer">
+    <p><em>Esta es una versión alternativa del anecdotario. Para ver las anécdotas organizadas por categorías, visita <a href="/anecdotario-modular.html">Anecdotario Modular</a>.</em></p>
+
+    <p>Las anécdotas se cargan dinámicamente desde el archivo JavaScript embebido.</p>
+</div>
+
+<script>
+    // Datos de las anécdotas (recuperadas desde Wayback Machine)
+    const anecdotas = [
+    {
+        titulo: "Algún Proyecto?",
+        contenido: `Anecdotario Algún proyecto? Mi mamá pudo haber participado en un campeonato mundial de madres judías con bastantes posibilidades, no sé si de ganarlo pero seguramente de hacer un buen papel. A principios del '90 y al regreso de unas vacaciones, fuimos con mi mujer a tomar un habitual cafecito de los sábados a casa de mi vieja. Nos recibió con el siempre sabroso café "a la turca" y con la acostumbrada exageración de dulces y cosas ricas como para hacer entrar en sobrepeso a un regimiento de gurkas. Luego de un rato de charla se puso un poco seria y me preguntó: "Querido, tenés algún proyecto de trabajo?" Como le contesté que no, se puso más seria y comentó: "Ay, Ernie, estoy un poco preocupada..." Mi rápida respuesta fue: "Dale, vieja, recién estamos en marzo, es principio de temporada, hay algunas puntas por ahí, no te preocupes que algo va a salir, quedate tranquila..." Y mi vieja dale con lo mismo: "Ay, no Ernie, como voy a quedarme tranquila? Es en esto que me quedo pensando todas las noches... a veces ni puedo dormir... estoy muy preocupada..." Entonces Cristina, tratando de "aligerar" el ambiente: "Bueno, Rita, no se preocupe tanto, no es para hacerse tanta malasangre..." Y mi vieja, con su tonito cruza de madre judía de libro y reina en el exilio: "Puede ser... pero lo hago con gusto!"`
+    },
+    {
+        titulo: "Carlitos y la Trompeta",
+        contenido: `Anecdotario (La Banda Elástica) Carlitos y la trompeta Carlos es un personaje muy curioso, retraído y al mismo tiempo muy gracioso, detallista a la vez que distraído... En una temporada en el Teatro Colón de Mar del Plata, Carlos estaba tocando con "dificultades", con menos sonido del habitual y como si hiciera un gran esfuerzo, cosa rara en él, y nosotros pensamos que era por falta de estudio, falta de labio. Habitualmente llegábamos al teatro un par de horas antes de la función y nos poníamos a tocar para ir calentando y probar la amplificación, pero más que nada porque nos encantaba. Una vez que Carlos no había llegado intenté tocar su trompeta pero apenas le pude sacar sonido, era una piedra, y pensé que además de no ser trompetista había pasado mucho tiempo sin probar ese tipo de boquilla. No pasó más de una semana de este episodio y una noche, antes de la función, Carlos se acerca y me dice que no sabe qué pasa pero no le puede sacar sonido a la trompeta. Probé y era cierto, pensé que tal vez al intentar limpiarla Lito (nuestro asistente) había puesto los pistones en los cilindros equivocados. Pero resulta que ni Carlos ni Lito habían hecho nada. Faltaban unos veinte minutos para la función y no sabíamos qué hacer. De pronto se me ocurre sacar la boquilla y mirar el orificio... Para qué... se veía apenas un hilito de luz, cuando en realidad debería verse un diámetro de un par de milímetros. La destapamos con un cepillito y pensé "Ya está..." Puse la boquilla, soplé y nada... Ya había verificado que los pistones estaban en la posición correcta, no sabía qué hacer, y perdido por perdido, empecé a desarmar la trompeta sacándole las "pompas" (son esas curvas que se ven saliendo de los cilindros y vinculando los tramos rectos). Bueno, lo más chico que salía de las pompas eran dinosaurios de regular tamaño, y ahí nos enteramos que Carlos nunca la había limpiado porque creía que con la llavecita de desagote bastaba, cosa que tal vez fuera cierta cuando tocaba en alguna "jam session" de vez en cuando, pero no cuando tocaba ocho o diez veces por semana durante casi dos horas. Vaya en descargo de Carlos que él se la había comprado a un director de teatro que no voy a nombrar, pero que sospecho que tuvo la mayor responsabilidad en esta historia. La cuestión es que tuvimos que limpiar la trompeta poniéndola bajo el chorro de la canilla y usar un secador de pelo (y mucha adrenalina) para tenerla lista antes del comienzo de la función. Obviamente, las "dificultades" no tenían que ver con estudio ni con labio ni nada, era la trompeta que estaba intocable y hay que decir que así y todo, no sabemos cómo, él la hacía sonar... Como se podrán imaginar, Carlos con su trompeta limpia, además de tocar como los dioses, fue el tipo más feliz del mundo. Y nosotros también.`
+    }
+    // ... más anécdotas del archivo original
+    ];
+
+    // Renderizar anécdotas
+    const container = document.getElementById('anecdotasContainer');
+    if (container && anecdotas.length > 0) {
+        container.innerHTML = anecdotas.map(anecdota => `
+            <div class="anecdota-item">
+                <h3>${anecdota.titulo}</h3>
+                <div class="anecdota-contenido">${anecdota.contenido}</div>
+            </div>
+        `).join('');
+    }
+</script>
