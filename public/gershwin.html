@@ -3,43 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gershwin, el hombre que amamos - Ernesto Acher">
-    <title>Gershwin, el hombre que amamos - Ernesto Acher</title>
-    <link rel="stylesheet" href="css/app.css">
+    <meta name="description" content="Homenaje a Gershwin - Ernesto Acher">
+    <meta name="keywords" content="Gershwin, homenaje, jazz, Ernesto Acher">
+    <title>Homenaje a Gershwin - Ernesto Acher</title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="page-gershwin">
     <div class="site-container">
-        <div id="sidebar-container"></div>
-        <div class="content-wrapper">
-            <div id="header-container"></div>
-            <main class="main-content">
-                <div class="content-header-title">
-                    <h1>Gershwin, el hombre que amamos</h1>
-                    <nav class="page-nav-right">
-                        <ul>
-                            <li class="active">- Comienzo</li>
-                        </ul>
-                    </nav>
-                </div>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <a href="/index.html" class="sidebar-logo-link">
+                <h1 class="sidebar-logo">Ernesto Acher</h1>
+            </a>
+            <div class="sidebar-logo-ribbon"></div>
+        </header>
+    
+        <nav class="sidebar-nav">
+            <ul id="sidebar-menu">
+                <li>
+                    <a href="/lesluthiers.html">Les Luthiers</a>
+                </li>
+                <li>
+                    <a href="/labandaelastica.html">La Banda Elástica</a>
+                </li>
+                <li>
+                    <a href="/humorconachis.html">Unipersonal</a>
+                </li>
+                <li>
+                    <a href="/veladas.html">Conciertos de música humor</a>
+                </li>
+                <li>
+                    <a href="/offside.html">Offside Chamber Orchestra</a>
+                </li>
+                <li class="active">
+                    <a href="/gershwin.html">Homenaje a Gershwin</a>
+                </li>
+                <li>
+                    <a href="/animales.html">Los animales de la música</a>
+                </li>
+                <li>
+                    <a href="/detodo.html">De todo como en botica</a>
+                </li>
+                <li>
+                    <a href="/realizaciones.html">Realizaciones recientes</a>
+                </li>
+                <li>
+                    <a href="/proyectos.html">Nuevos proyectos</a>
+                </li>
+                <li>
+                    <a href="/menuconciertos.html">Menú de conciertos</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-                <div class="section-content">
-                    <img src="images/gershwin/main.jpg" alt="Gershwin - El hombre que amamos" class="content-image-right">
+    <!-- CONTENT WRAPPER -->
+    <div class="content-wrapper">
+        <!-- HEADER -->
+        <header class="content-header">
+            <div class="secondary-menu" id="secondary-menu">
+                <a href="/discografia.html">Discografía</a>
+                <a href="/anecdotario.html">Anecdotario</a>
+                <a href="/partituras.html">Partituras</a>
+                <a href="/galerias.html">Galerías</a>
+            </div>
+        
+            <div class="header-menu" id="header-menu">
+                <a href="/index.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    Inicio
+                </a>
+                <a href="/links.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="10 7 17 7 17 14"/>
+                    </svg>
+                    Links
+                </a>
+                <a href="/actualizaciones.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 4 23 10 17 10"/>
+                        <polyline points="1 20 1 14 7 14"/>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                    Actualizaciones
+                </a>
+                <a href="/mapa.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="2" width="6" height="4"/>
+                        <line x1="12" y1="6" x2="12" y2="10"/>
+                        <line x1="4" y1="10" x2="20" y2="10"/>
+                        <line x1="5" y1="10" x2="5" y2="14"/>
+                        <line x1="12" y1="10" x2="12" y2="14"/>
+                        <line x1="19" y1="10" x2="19" y2="14"/>
+                        <rect x="2" y="14" width="6" height="4"/>
+                        <rect x="9" y="14" width="6" height="4"/>
+                        <rect x="16" y="14" width="6" height="4"/>
+                    </svg>
+                    Mapa del sitio
+                </a>
+                <a href="/contacto.html">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Contacto
+                </a>
+            </div>
+        </header>
 
-                    <h2>Primera versión</h2>
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <div class="content-header-title">
+                <h1>Homenaje a Gershwin</h1>
 
-                <p>En una visita de Lalo Schifrin a Buenos Aires, en 1997, me encontré con Baby López Furst y Jorge Navarro, a quienes hacía un tiempo que no veía, y unas semanas más tarde nos citamos con Jorge a tomar café y recordar viejos tiempos. Justo por esa época me propusieron armar un ciclo de tres conciertos de "fusión" para una fundación y propuse, con una orquesta sinfónica como base, un concierto de tango con Jairo y Rodolfo Mederos, uno de jazz con el dúo de pianos Jorge Navarro-Baby López Furst y un tercero con cantantes haciendo fragmentos de comedia musical.</p>
+                <!-- Menú flotante derecho -->
+                <nav class="page-nav-right">
+                    <ul>
+                        <li class="active">
+                            - Comienzo
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
-                <p>Mientras esperaba la respuesta me quedé pensando que al concierto de jazz, que iba a ser sobre la base de standards, le faltaba un remate que tuviera "punch", hasta que un día se me ocurrió que sería fantástico hacer una versión jazzeada de "Rhapsody in blue". Me encontré con Jorge en un bar y cuando empecé a contarle la idea se puso como loco y empezó a saltar y a gritar su conocido "No... no... no puede ser..." Yo estaba desconcertado y por un instante pensé "Se enojó... no le gustó..." Cuando se calmó, me explicó que la excitación era porque hacía seis meses que él y Baby estaban pensando en lo mismo, incluso lo habían comentado con Pedro Ignacio Calderón, pero no avanzaban porque no sabían quien podría animarse a escribir la versión. Con todo el entusiasmo, le dije que me animaba y además él a su vez me propuso que el programa fuera dedicado sólo a Gershwin. Hasta tenían el nombre "Gershwin, el hombre que amamos", obviamente una paráfrasis de su tema más conocido, y acepté enseguida porque me pareció una idea brillante. Al final, el ciclo no se concretó pero no quisimos dejar caer la idea, y a través de la gestión Rafael Pereyra conseguimos a Hiram Walker como sponsor (para whisky Premium). Baby y yo nos pusimos a trabajar como locos en los arreglos y hasta llegué a hacer una primera versión jazzeada de la "Rhapsody" para dúo de pianos, que Jorge y Baby estrenaron en el show que hacían en "Opera prima". Nunca dejaré de lamentar que no haya quedado grabación de esa versión...</p>
+            <!-- Contenido dinámico -->
+            <div class="section-content">
+    <img src="/images/gershwin/main.jpg" alt="Gershwin - El hombre que amamos" class="content-image-right">
 
-                <p>Más tarde y con todo el apoyo de Alberto Alonso y el querido Parmigiani (jefe de escenario) estrenamos en el Teatro Avenida (1.000 asientos!!). Con todo el susto del mundo anunciamos dos funciones (y eran en martes...) pero apenas se abrió la boletería, las entradas volaron. Para hacerla corta, hicimos ocho funciones a sala repleta y tuvimos que parar porque yo tenía compromiso de unos conciertos en Caracas. Pero conseguimos repetir el ciclo al año siguiente, también en el Avenida, y además lo presentamos en Córdoba, en Santa Fe, en Mar del Plata y en São Paulo (Brasil). Se grabó en audio y video, hubo contactos para presentarlo en EEUU, hubo proyectos de una segunda versión que incluía el Concierto en Fa, en fin, daba para mucho más pero la prematura y lamentada muerte de Baby cerró este capítulo. Lo he dicho muchas veces, y sigo sintiéndolo: de las muchas, muchísimas noches de felicidad y alegría que tuve la suerte de vivir en el escenario, si tuviera que elegir una, sin dudas elegiría una de esas noches de "Gershwin" en el Avenida. Era puro placer estar ahí, con esos musicazos y con Jorge y Baby produciendo tanta belleza.</p>
+    <h2>Primera versión</h2>
 
-                <h2>Segunda versión</h2>
+<p>En una visita de Lalo Schifrin a Buenos Aires, en 1997, me encontré con Baby López Furst y Jorge Navarro, a quienes hacía un tiempo que no veía, y unas semanas más tarde nos citamos con Jorge a tomar café y recordar viejos tiempos. Justo por esa época me propusieron armar un ciclo de tres conciertos de "fusión" para una fundación y propuse, con una orquesta sinfónica como base, un concierto de tango con Jairo y Rodolfo Mederos, uno de jazz con el dúo de pianos Jorge Navarro-Baby López Furst y un tercero con cantantes haciendo fragmentos de comedia musical.</p>
 
-                <p>Y la vida siempre da revancha... A principios del 2006 tuvimos el ofrecimiento de reeditar el homenaje a Gershwin. Lo hablamos mucho con Jorge y decidimos hacerlo con orquesta y trío, porque teníamos nostalgia de esas noches y porque pensamos que era una manera de mantener vivo el recuerdo y la magia de los arreglos de Baby. Esta nueva versión se estrenó en Mendoza en el festival "Los caminos del vino". A mediados de año nos ofrecieron hacerlo en el Teatro Colón, y a pesar de estar muy "sobre la hora" y otros inconvenientes, hicimos dos funciones a sala repleta. Fueron dos noches de mucha felicidad en las que sólo lamentamos la ausencia del querido Baby. Como tantas veces sucede, nos quedamos con ganas de más y en noviembre nos animamos a dos funciones en el Teatro Coliseo, esta vez con la grabación a cargo del inefable Carlos Piriz. Se hizo algunas veces más, en el Parque 3 de febrero, en el Festival de Jazz de Campana, a fines de marzo lo haremos en Tucumán. El proyecto sigue vivo, y tanto que el 18 de abril lo haremos en el Teatro Opera de Buenos Aires, presentando el CD editado por Acqua Records.</p>
-                </div>
-            </main>
-        </div>
+<p>Mientras esperaba la respuesta me quedé pensando que al concierto de jazz, que iba a ser sobre la base de standards, le faltaba un remate que tuviera "punch", hasta que un día se me ocurrió que sería fantástico hacer una versión jazzeada de "Rhapsody in blue". Me encontré con Jorge en un bar y cuando empecé a contarle la idea se puso como loco y empezó a saltar y a gritar su conocido "No... no... no puede ser..." Yo estaba desconcertado y por un instante pensé "Se enojó... no le gustó..." Cuando se calmó, me explicó que la excitación era porque hacía seis meses que él y Baby estaban pensando en lo mismo, incluso lo habían comentado con Pedro Ignacio Calderón, pero no avanzaban porque no sabían quien podría animarse a escribir la versión. Con todo el entusiasmo, le dije que me animaba y además él a su vez me propuso que el programa fuera dedicado sólo a Gershwin. Hasta tenían el nombre "Gershwin, el hombre que amamos", obviamente una paráfrasis de su tema más conocido, y acepté enseguida porque me pareció una idea brillante. Al final, el ciclo no se concretó pero no quisimos dejar caer la idea, y a través de la gestión Rafael Pereyra conseguimos a Hiram Walker como sponsor (para whisky Premium). Baby y yo nos pusimos a trabajar como locos en los arreglos y hasta llegué a hacer una primera versión jazzeada de la "Rhapsody" para dúo de pianos, que Jorge y Baby estrenaron en el show que hacían en "Opera prima". Nunca dejaré de lamentar que no haya quedado grabación de esa versión...</p>
+
+<p>Más tarde y con todo el apoyo de Alberto Alonso y el querido Parmigiani (jefe de escenario) estrenamos en el Teatro Avenida (1.000 asientos!!). Con todo el susto del mundo anunciamos dos funciones (y eran en martes...) pero apenas se abrió la boletería, las entradas volaron. Para hacerla corta, hicimos ocho funciones a sala repleta y tuvimos que parar porque yo tenía compromiso de unos conciertos en Caracas. Pero conseguimos repetir el ciclo al año siguiente, también en el Avenida, y además lo presentamos en Córdoba, en Santa Fe, en Mar del Plata y en São Paulo (Brasil). Se grabó en audio y video, hubo contactos para presentarlo en EEUU, hubo proyectos de una segunda versión que incluía el Concierto en Fa, en fin, daba para mucho más pero la prematura y lamentada muerte de Baby cerró este capítulo. Lo he dicho muchas veces, y sigo sintiéndolo: de las muchas, muchísimas noches de felicidad y alegría que tuve la suerte de vivir en el escenario, si tuviera que elegir una, sin dudas elegiría una de esas noches de "Gershwin" en el Avenida. Era puro placer estar ahí, con esos musicazos y con Jorge y Baby produciendo tanta belleza.</p>
+
+<h2>Segunda versión</h2>
+
+<p>Y la vida siempre da revancha... A principios del 2006 tuvimos el ofrecimiento de reeditar el homenaje a Gershwin. Lo hablamos mucho con Jorge y decidimos hacerlo con orquesta y trío, porque teníamos nostalgia de esas noches y porque pensamos que era una manera de mantener vivo el recuerdo y la magia de los arreglos de Baby. Esta nueva versión se estrenó en Mendoza en el festival "Los caminos del vino". A mediados de año nos ofrecieron hacerlo en el Teatro Colón, y a pesar de estar muy "sobre la hora" y otros inconvenientes, hicimos dos funciones a sala repleta. Fueron dos noches de mucha felicidad en las que sólo lamentamos la ausencia del querido Baby. Como tantas veces sucede, nos quedamos con ganas de más y en noviembre nos animamos a dos funciones en el Teatro Coliseo, esta vez con la grabación a cargo del inefable Carlos Piriz. Se hizo algunas veces más, en el Parque 3 de febrero, en el Festival de Jazz de Campana, a fines de marzo lo haremos en Tucumán. El proyecto sigue vivo, y tanto que el 18 de abril lo haremos en el Teatro Opera de Buenos Aires, presentando el CD editado por Acqua Records.</p>
+</div>
+
+        </main>
     </div>
-    <script src="js/components.js"></script>
+</div>
+
 </body>
 </html>
