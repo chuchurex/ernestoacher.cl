@@ -205,14 +205,24 @@ class SiteBuilder {
     try {
       const sectionData = require(`../src/data/sections/${pageId}.json`);
 
+      // Convertir pageId a ruta de contenido (ej: lesluthiers-1971 -> lesluthiers/1971)
+      let contentRelPath = pageId;
+      if (pageId.includes('-')) {
+        const parts = pageId.split('-');
+        // Si el segundo parte es un número o empieza con f_ (fotos), es un subdirectorio
+        if (parts.length >= 2 && (parts[1].match(/^\d/) || parts[1].startsWith('f_'))) {
+          contentRelPath = `${parts[0]}/${parts.slice(1).join('-')}`;
+        }
+      }
+
       // Leer contenido HTML
-      const contentPath = path.join(__dirname, `../src/content/${pageId}.html`);
+      const contentPath = path.join(__dirname, `../src/content/${contentRelPath}.html`);
       let pageContent = '';
 
       if (await fs.pathExists(contentPath)) {
         pageContent = await fs.readFile(contentPath, 'utf8');
       } else {
-        console.log(chalk.yellow(`  ⚠ No se encontró contenido para ${pageId}`));
+        console.log(chalk.yellow(`  ⚠ No se encontró contenido para ${pageId} en ${contentRelPath}.html`));
         pageContent = `<p>Contenido en construcción...</p>`;
       }
 
@@ -235,11 +245,18 @@ class SiteBuilder {
         content: interiorContent
       });
 
-      // Guardar archivo
-      const outputPath = path.join(__dirname, `../public/${pageId}.html`);
+      // Determinar ruta de salida (mantener subdirectorios si aplica)
+      let outputPath;
+      if (contentRelPath.includes('/')) {
+        outputPath = path.join(__dirname, `../public/${contentRelPath}.html`);
+        await fs.ensureDir(path.dirname(outputPath));
+      } else {
+        outputPath = path.join(__dirname, `../public/${pageId}.html`);
+      }
+
       await fs.writeFile(outputPath, fullHtml);
 
-      console.log(chalk.green(`  ✓ Generada: ${pageId}.html`));
+      console.log(chalk.green(`  ✓ Generada: ${contentRelPath}.html`));
     } catch (error) {
       console.error(chalk.red(`  ✗ Error construyendo ${pageId}:`), error.message);
     }
@@ -303,14 +320,84 @@ class SiteBuilder {
     const additionalPages = [
       'anecdotario',
       'humorconachis-fotos',
+      'humorconachis-santiago',
       'labandaelastica-discografia',
       'labandaelastica-fotos',
+      'labandaelastica-disco1',
+      'labandaelastica-disco2',
+      'labandaelastica-disco3',
+      'labandaelastica-espectaculos',
+      'labandaelastica-videos',
+      'labandaelastica-audio',
       'lesluthiers-discografia',
       'lesluthiers-fotos',
+      'lesluthiers-disco2',
+      'lesluthiers-disco3',
+      'lesluthiers-disco4',
+      'lesluthiers-disco5',
+      'lesluthiers-disco6',
+      'lesluthiers-disco7',
+      'lesluthiers-espectaculos',
+      'lesluthiers-videos',
       'offside-fotos',
-      'veladas-fotos'
+      'veladas-fotos',
+      'veladas-videos',
+      'veladas-bromas'
     ];
     for (const pageId of additionalPages) {
+      await this.buildSimplePage(pageId);
+    }
+
+    // Construir páginas en subdirectorios
+    const subDirPages = [
+      'lesluthiers-1971',
+      'lesluthiers-1972',
+      'lesluthiers-1975',
+      'lesluthiers-1976',
+      'lesluthiers-1977',
+      'lesluthiers-1979',
+      'lesluthiers-1981',
+      'lesluthiers-1985',
+      'lesluthiers-1986',
+      'lesluthiers-f_ll1',
+      'lesluthiers-f_ll4',
+      'lesluthiers-f_ll5',
+      'lesluthiers-f_ll6',
+      'lesluthiers-f_ll7',
+      'lesluthiers-f_ll8',
+      'lesluthiers-f_ll9',
+      'lesluthiers-f_ll10',
+      'lesluthiers-f_ll11',
+      'lesluthiers-f_ll12',
+      'lesluthiers-f_ll13',
+      'lesluthiers-f_ll14',
+      'lesluthiers-f_ll15',
+      'lesluthiers-f_ll16',
+      'lesluthiers-f_ll17',
+      'lesluthiers-f_ll18',
+      'lesluthiers-f_ll20',
+      'lesluthiers-f_ll21',
+      'lesluthiers-f_ll23',
+      'lesluthiers-f_ll24',
+      'lesluthiers-f_ll26',
+      'lesluthiers-f_ll27',
+      'lesluthiers-f_ll28',
+      'lesluthiers-f_ll33',
+      'lesluthiers-f_ll35',
+      'lesluthiers-f_ll36',
+      'lesluthiers-f_ll37',
+      'lesluthiers-f_ll38',
+      'lesluthiers-f_ll41',
+      'lesluthiers-f_ll43',
+      'lesluthiers-f_ll44',
+      'lesluthiers-f_ll45',
+      'lesluthiers-f_ll46',
+      'lesluthiers-f_ll47',
+      'lesluthiers-f_ll48',
+      'lesluthiers-f_ll50',
+      'lesluthiers-f_ll51'
+    ];
+    for (const pageId of subDirPages) {
       await this.buildSimplePage(pageId);
     }
 
