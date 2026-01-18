@@ -5,21 +5,16 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf public && mkdir -p public",
-    "copy:all": "cp index.html public/ && cp *.html public/ 2>/dev/null || true && cp -r images public/ && cp -r assets public/ && cp -r js public/ && cp -r components public/ && cp -r data public/",
     "sass:build": "sass scss:public/css --style=compressed --no-source-map",
     "sass:watch": "sass --watch scss:public/css --style=expanded --source-map",
-    "build": "npm run clean && npm run copy:all && npm run sass:build",
-    "build:templates": "node scripts/build.js && npm run sass:build && cp -r components public/ && cp -r data public/",
+    "build": "node scripts/build.js && npm run sass:build && cp -r components public/ && cp -r data public/",
     "validate": "node scripts/validate-links.js",
-    "dev:sass": "npm run sass:watch",
     "dev:serve": "cd public && python3 -m http.server 3012",
-    "dev": "./scripts/dev-server.sh",
-    "dev:templates": "npm run build:templates && npm run dev:serve",
+    "dev": "npm run build && npm run dev:serve",
     "start": "npm run build && npm run validate",
-    "legacy:sass:watch": "sass --watch scss:css --style=expanded --source-map",
-    "legacy:sass:build": "sass scss:css --style=compressed --no-source-map",
-    "legacy:serve": "live-server --port=3012 --watch=css,js,index.html --ignore=scss,node_modules",
-    "legacy:dev": "npm-run-all --parallel legacy:sass:watch legacy:serve"
+    "archive:copy:all": "cp archive/html-original/index.html public/ && cp archive/html-original/*.html public/ 2>/dev/null || true && cp -r images public/ && cp -r assets public/ && cp -r js public/ && cp -r components public/ && cp -r data public/",
+    "archive:build": "npm run clean && npm run archive:copy:all && npm run sass:build",
+    "archive:dev": "./scripts/dev-server.sh"
   },
   "keywords": [
     "ernesto-acher",
