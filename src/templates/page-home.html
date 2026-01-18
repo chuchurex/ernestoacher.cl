@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{meta.description}}">
+    <title>{{siteName}}</title>
+
+    <!-- Google Fonts - Great Vibes para el título script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <div class="home-container">
+        <!-- ========== HEADER / LOGO ========== -->
+        <header class="site-header">
+            <h1 class="logo">{{siteName}}</h1>
+            <div class="logo-ribbon"></div>
+        </header>
+
+        <!-- ========== MAIN LAYOUT ========== -->
+        <main class="home-content">
+            <!-- Elipse decorativa de fondo -->
+            <div class="ellipse-container">
+                <svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet" class="ellipse-svg">
+                    <defs>
+                        <linearGradient id="wineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#800000;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#500000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path class="ellipse-path" fill-rule="evenodd" d="M 500 400
+                             m -450, 0
+                             a 450,300 0 1,0 900,0
+                             a 450,300 0 1,0 -900,0
+                             z
+                             M 500 400
+                             m -420, 0
+                             a 420,299 0 1,0 840,0
+                             a 420,299 0 1,0 -840,0
+                             z" />
+                </svg>
+            </div>
+
+            <!-- Menú Principal (izquierda) -->
+            <nav class="menu-principal">
+                <ul>
+                    {{#each navigation.sidebar}}
+                    <li><a href="{{url}}"{{#if id}} data-section="{{id}}"{{/if}}>{{label}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+
+            <!-- Área Central - Carrusel de Destacados -->
+            <section class="carousel-container">
+                <div class="carousel">
+                    {{#each carousel}}
+                    <a href="{{url}}" class="carousel-slide" data-section="{{id}}" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="{{image}}" alt="{{title}}">
+                        <p class="carousel-text">{{text}}</p>
+                    </a>
+                    {{/each}}
+                </div>
+            </section>
+
+            <!-- Foto de Ernesto -->
+            <div class="ernesto-photo">
+                <img src="{{ernestoPhoto}}" alt="{{siteName}}">
+            </div>
+
+            <!-- Menú Media (derecha) -->
+            <nav class="menu-media">
+                <ul>
+                    {{#each menuMedia}}
+                    <li><a href="{{url}}">{{label}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        </main>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="site-footer">
+            <a href="#actualizaciones" class="update-link">{{footer.updateText}}</a>
+            <span class="archive-link">{{footer.archiveText}}</span>
+        </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
