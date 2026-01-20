@@ -3,49 +3,36 @@
 
 .site-header {
   position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+  top: 5%; // Slightly higher to stay clear of the ellipse
+  left: 5%; // Aligned to the left, well before the ellipse starts
+  // transform: translateX(-50%); // Removed centering
+  text-align: left; // Left align text
   z-index: 10;
+  width: auto; // Don't take full width anymore
+  pointer-events: none;
 
   @include respond-to('md') {
     position: relative;
     top: auto;
     left: auto;
+    width: 100%;
+    text-align: center; // Center on mobile
     transform: none;
     padding: $spacing-lg $spacing-md;
   }
 }
 
+.logo {
+  font-family: $font-family-headings;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: $color-silver;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
 .logo-ribbon {
-  width: 200px;
-  height: 20px;
-  margin: $spacing-sm auto 0;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(90deg,
-      transparent 0%,
-      $color-silver 20%,
-      $color-silver 80%,
-      transparent 100%);
-    opacity: 0.6;
-  }
-
-  &::before {
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  &::after {
-    width: 60%;
-    top: 8px;
-    left: 20%;
-  }
+  display: none;
 }

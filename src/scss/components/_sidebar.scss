@@ -7,22 +7,45 @@
 
 // Contenedor del sidebar (carga dinámica)
 #sidebar-container {
-    width: $sidebar-width;
+    width: $sidebar-width; // 30% by default, managed by flex in layout
+
+    @include respond-to('md') {
+        width: 100%;
+    }
 }
 
 .sidebar {
-    background-color: $color-bg-dark;
-    padding: $spacing-lg $spacing-md;
+    background-color: transparent; // Removed solid background for open look
+    // Or keep dark if desired:
+    // background-color: $color-bg-dark;
+
+    padding: $spacing-xl $spacing-xl; // Increased horizontal padding
     display: flex;
     flex-direction: column;
-    position: relative; // Needed for absolute positioning of SVG
 
+    // STICKY BEHAVIOR
+    position: sticky;
+    top: 40px; // Offset from top
+    height: auto;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto; // Scroll if content is too long
+
+    // Scrollbar styling
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
 }
 
 // Header del sidebar con logo
 .sidebar-header {
-    margin-bottom: $spacing-xl;
-    padding-bottom: $spacing-md;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $color-wine; // Modern accent color
 }
 
 .sidebar-logo-link {
@@ -32,25 +55,22 @@
 
     &:hover {
         transform: scale(1.02);
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     }
 }
 
 .sidebar-logo {
-    font-family: $font-logo; // Great Vibes (igual que portada)
-    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
-    color: $color-white;
+    font-family: $font-family-headings; // Matches homepage
+    font-size: 2.8rem; // Slightly larger
+    font-weight: 700;
+    color: $color-silver; // Matches homepage
     text-align: left;
-    margin: 0 0 $spacing-sm 0;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    transition: inherit;
+    margin: 0;
+    letter-spacing: -0.02em; // Matches homepage
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); // Matches homepage
 }
 
 .sidebar-logo-ribbon {
-    width: 80%;
-    height: 2px;
-    background: linear-gradient(90deg, $color-wine 0%, transparent 100%);
-    margin-top: $spacing-xs;
+    display: none; // Removing old decorative element
 }
 
 // Navegación del sidebar
@@ -61,94 +81,50 @@
         margin: 0;
 
         li {
-            margin-bottom: $spacing-xs;
+            margin-bottom: 12px;
 
             a {
-                font-family: $font-menu; // Misma fuente que portada
-                color: $color-text-dim;
+                font-family: $font-family-menu; // Elegant Serif for menus
+                color: $color-text-on-dark; // High contrast for accessibility
                 text-decoration: none;
                 display: block;
-                padding: 0.15rem 0;
-                font-size: clamp(1rem, 1.3vw, 1.2rem); // Responsive como portada
+                padding: 4px 0;
+                font-size: 1.1rem; // Slightly larger for Serif menu legibility
                 line-height: 1.4;
-                transition: all 0.3s ease;
+                transition: all 0.2s ease;
                 position: relative;
-                padding-left: 22px; // Espacio para el bullet más grande
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+                padding-left: 0;
 
-                // Bullet personalizado - más grande y blanco por defecto
-                &::before {
-                    content: '•';
-                    position: absolute;
-                    left: 0;
-                    color: $color-white; // Blanco por defecto
-                    font-size: 20px; // Más grande
-                    line-height: 1.2;
-                }
 
+                // Modern hover effect (left border or subtle shift)
                 &:hover {
                     color: $color-white;
-                    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+                    transform: translateX(5px);
                 }
 
                 &.active {
                     color: $color-white;
-
-                    // Bullet vino solo para active
+                    font-weight: 700;
+                    padding-left: 16px; // Indent for hierarchy
+                    border-left: 4px solid $color-wine; // Modern indicator
+                    background: linear-gradient(90deg, rgba($color-wine, 0.15) 0%, transparent 100%);
+                    
+                    // Remove old dot
                     &::before {
-                        color: $color-wine;
+                        display: none;
                     }
                 }
+
+                // Remove old ::before/bullets
             }
 
-            // Alineación curva siguiendo el trazo SVG (hacia la derecha progresivamente)
-            &:nth-child(1) {
-                padding-right: 0px;
-            }
-
-            &:nth-child(2) {
-                padding-right: 5px;
-            }
-
-            &:nth-child(3) {
-                padding-right: 10px;
-            }
-
-            &:nth-child(4) {
-                padding-right: 15px;
-            }
-
-            &:nth-child(5) {
-                padding-right: 20px;
-            }
-
-            &:nth-child(6) {
-                padding-right: 25px;
-            }
-
-            &:nth-child(7) {
-                padding-right: 28px;
-            }
-
-            &:nth-child(8) {
-                padding-right: 26px;
-            }
-
-            &:nth-child(9) {
-                padding-right: 22px;
-            }
-
-            &:nth-child(10) {
-                padding-right: 16px;
-            }
-
-            &:nth-child(11) {
-                padding-right: 8px;
-            }
+            // Removing nth-child curve hacks
         }
     }
 
     @include respond-to('md') {
-        display: none; // Ocultar en mobile
+        // En mobile el sidebar se comporta distinto o se oculta
+        // Por ahora mantenemos la regla de ocultarlo si hay un menú hamburguesa
+        display: none;
     }
 }

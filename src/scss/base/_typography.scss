@@ -2,7 +2,22 @@
 
 body {
   font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
   background-color: $color-bg-dark;
   color: $color-text-dark;
-  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headings;
+  color: $color-wine;
+  font-weight: 700;
+  line-height: 1.3;
 }
