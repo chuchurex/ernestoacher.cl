@@ -43,64 +43,36 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.content-header {
-  position: relative;
-  background-color: #0e0e0e;
-  background-image: url("../assets/images/ernesto-grupo.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 200px;
-}
-
-.secondary-menu {
+.site-header {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  z-index: 10;
-}
-.secondary-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 11px;
-  display: block;
-  transition: all 0.2s ease;
-}
-.secondary-menu a:hover {
-  text-decoration: underline;
-}
-
-.header-menu {
-  background-color: #666;
-  padding: 8px 15px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
+  width: 100%;
+  top: 8%;
   left: 0;
-  right: 0;
-}
-.header-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 11px;
+  z-index: 20;
   display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: all 0.2s ease;
+  justify-content: center;
+  pointer-events: none;
 }
-.header-menu a:hover {
-  text-decoration: underline;
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+    top: auto;
+    background: transparent;
+    padding: 15px;
+  }
 }
 
-.menu-icon {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
+.logo {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+.logo-ribbon {
+  display: none;
 }
 
 .content-wrapper {
