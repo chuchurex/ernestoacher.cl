@@ -4,71 +4,18 @@
 // ========================================
 
 .content-header-title {
-    position: relative;
-    margin-bottom: $spacing-lg;
-    margin-top: -20px; // Contrarresta el padding-top del main-content
-    margin-right: -30px; // Contrarresta el padding-right del main-content
+  position: relative;
+  margin-bottom: $spacing-lg;
+  margin-top: -20px; // Contrarresta el padding-top del main-content
+  margin-right: -30px; // Contrarresta el padding-right del main-content
 }
 
-.page-nav-right {
-    float: right; // Cambiar de absolute a float para que el contenido fluya
-    min-width: 180px;
-    background: #666; // Fondo gris
-    padding: 0;
-    margin-left: $spacing-md; // Espacio entre el menú y el contenido
-    margin-top: -33px; // Subir 33px para alinearlo a posición 0
-
-    // Por ahora: rectángulo recto simple
-    // clip-path: none;
-
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            padding: $spacing-sm $spacing-md;
-            font-size: $font-size-base;
-            color: #fff; // Texto blanco por defecto
-            border-bottom: 1px solid #555; // Líneas divisorias
-            position: relative;
-            transition: background-color 0.2s ease;
-            text-align: right; // Alineación derecha por ahora
-
-            &:last-child {
-                border-bottom: none;
-            }
-
-            &.active {
-                background-color: #999; // Gris más claro para activo (mejor contraste)
-                color: #fff;
-                font-weight: 600;
-            }
-
-            &:hover:not(.active) {
-                background-color: #777;
-            }
-
-            a {
-                color: #fff;
-                text-decoration: none;
-                display: block;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-}
 
 .content-image-right {
-    float: right;
-    margin: 0 0 $spacing-md $spacing-lg;
-    max-width: 220px;
-    height: auto;
+  float: right;
+  margin: 0 0 $spacing-md $spacing-lg;
+  max-width: 220px;
+  height: auto;
 }
 
 // Estilos para páginas de la sección Les Luthiers
@@ -90,7 +37,9 @@
   .section-content {
     line-height: 1.8;
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       margin-top: $spacing-xl;
       margin-bottom: $spacing-md;
     }

@@ -1,0 +1,92 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ========================================
+// Right Navigation Component (Interior Pages)
+// ========================================
+
+.page-nav-right {
+  float: right;
+  width: 220px;
+  margin-left: $spacing-xl;
+  margin-bottom: $spacing-lg;
+  padding: $spacing-sm 0;
+  background: transparent;
+  // Subtle vertical separator
+  border-left: 1px solid rgba($color-wine, 0.08);
+
+  @include respond-to('md') {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-top: $spacing-lg;
+    border-left: none;
+    border-bottom: 1px solid rgba($color-wine, 0.1);
+    padding: $spacing-md 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 2px;
+      font-family: $font-family-menu; // Lora
+      font-size: 1.05rem;
+      line-height: 1.2;
+      transition: $transition-base;
+      position: relative;
+      color: $color-text-muted;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding: 10px $spacing-md;
+        transition: $transition-fast;
+
+        &:hover {
+          color: $color-wine;
+          background-color: rgba($color-wine, 0.03);
+          padding-left: calc(#{$spacing-md} + 5px);
+        }
+      }
+
+      &.active {
+        color: $color-wine;
+        font-weight: 600;
+        background-color: rgba($color-wine, 0.05);
+        border-radius: 0 4px 4px 0;
+
+        // More integrated indicator
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 4px;
+          background-color: $color-wine;
+        }
+
+        // Active link doesn't need huge padding adjustments
+        a {
+          padding-left: $spacing-md;
+
+          &:hover {
+            padding-left: $spacing-md; // No move when active
+          }
+        }
+
+        @include respond-to('md') {
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
