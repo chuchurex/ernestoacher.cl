@@ -1,36 +1,22 @@
 {
   "name": "ernestoacher.cl",
   "version": "2.0.0",
-  "description": "Sitio web de Ernesto Acher - Nueva arquitectura modular basada en plantillas",
+  "description": "Sitio web de Ernesto Acher",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf public && mkdir -p public",
-    "sass:build": "sass src/scss:public/css --style=compressed --no-source-map",
-    "sass:watch": "sass --watch src/scss:public/css --style=expanded --source-map",
-    "build": "node scripts/build.js && npm run sass:build && cp -r images public/ && cp -r assets public/ && cp -r galerias public/ && cp -r js public/ && cp -r components public/ && cp -r data public/",
-    "validate": "node scripts/validate-links.js",
-    "dev:serve": "cd public && python3 -m http.server 3012",
-    "dev": "npm run build && npm run dev:serve",
-    "start": "npm run build && npm run validate",
-    "archive:copy:all": "cp archive/html-original/index.html public/ && cp archive/html-original/*.html public/ 2>/dev/null || true && cp -r images public/ && cp -r assets public/ && cp -r js public/ && cp -r components public/ && cp -r data public/",
-    "archive:build": "npm run clean && npm run archive:copy:all && npm run sass:build",
-    "archive:dev": "./scripts/dev-server.sh"
+    "sass:build": "sass scss:css --style=compressed --no-source-map",
+    "sass:watch": "sass --watch scss:css --style=expanded --source-map",
+    "build": "npm run sass:build",
+    "dev:serve": "python3 -m http.server 3012",
+    "dev": "npm run build && npm run dev:serve"
   },
   "keywords": [
-    "ernesto-acher",
-    "static-site-generator",
-    "handlebars",
-    "sass"
+    "ernesto-acher"
   ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chalk": "^4.1.2",
-    "cheerio": "^1.0.0-rc.12",
-    "fs-extra": "^11.2.0",
-    "handlebars": "^4.7.8",
     "live-server": "^1.2.2",
-    "nodemon": "^3.0.2",
     "npm-run-all": "^4.1.5",
     "sass": "^1.97.2"
   }
