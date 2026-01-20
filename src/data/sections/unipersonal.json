@@ -1,9 +1,8 @@
 {
-  "id": "unipersonal",
-  "title": "Humor con Achís",
-  "bodyClass": "page-humor-con-achis",
+  "title": "Humor con Acher",
+  "bodyClass": "page-unipersonal",
   "meta": {
-    "description": "Humor con Achís - Unipersonal de Ernesto Acher",
-    "keywords": "Humor con Achís, Ernesto Acher, unipersonal, stand-up"
+    "description": "Unipersonal de humor de Ernesto Acher.",
+    "keywords": "Ernesto Acher, Humor, Unipersonal, Teatro"
   }
 }
