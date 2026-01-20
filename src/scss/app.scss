@@ -15,6 +15,7 @@
 // 3. LAYOUT
 @use 'layout/header';
 @use 'layout/main';
+@use 'layout/interior'; // Nuevo layout para interiores
 @use 'layout/footer';
 
 // 4. COMPONENTES - Portada
@@ -25,6 +26,7 @@
 // 5. COMPONENTES - Interiores
 @use 'components/sidebar';
 @use 'components/content';
+@use 'components/nav-right';
 @use 'components/arc-decoration';
 
 // 6. SECCIONES ESPECÍFICAS

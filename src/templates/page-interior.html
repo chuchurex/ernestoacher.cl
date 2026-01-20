@@ -9,15 +9,16 @@
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-            <div class="content-header-title">
-                <h1>{{pageTitle}}</h1>
+            <div class="content-layout">
+                <article class="content-body">
+                    {{{pageContent}}}
+                </article>
 
                 <!-- Menú flotante derecho -->
-                {{> nav-right}}
+                <aside class="content-nav-right">
+                    {{> nav-right}}
+                </aside>
             </div>
-
-            <!-- Contenido dinámico -->
-            {{{pageContent}}}
         </main>
     </div>
 </div>

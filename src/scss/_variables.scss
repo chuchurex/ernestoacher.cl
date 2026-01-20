@@ -3,16 +3,20 @@
 // Colores, tipografías y valores del diseño original
 // ========================================
 
-// Colores principales - diseño original fiel
-$color-bg-dark: rgb(16, 14, 27);
-$color-bg-header: #0e0e0e;
-$color-bg-content: rgb(204, 204, 204);
-$color-menu-bar: #666;
-$color-text-light: #fff;
-$color-text-dark: #333;
-$color-text-muted: #999;
-$color-link: #000099;
-$color-accent: #cc0000;
+// Colores principales - diseño original fiel + Modernización
+// Colores principales - Modernización (Zinc/Slate Palette)
+// Colores principales - Modernización (Zinc/Slate Palette)
+$color-bg-dark: #18181b; // Zinc 950
+$color-bg-header: #09090b; // Zinc 950/Black
+$color-bg-content: #fafafa; // Zinc 50
+$color-bg-card: #ffffff;
+$color-menu-bar: #52525b; // Zinc 600
+$color-text-light: #f4f4f5; // Zinc 100
+$color-text-dark: #18181b; // Zinc 950 - Almost Black for maximum contrast (AAA)
+$color-text-muted: #52525b; // Zinc 600 - Good contrast on light backgrounds
+$color-text-on-dark: #e4e4e7; // Zinc 200 - High contrast on dark backgrounds
+$color-link: #9f1239; // Rose 800
+$color-accent: #e11d48; // Rose 600
 
 // Variables para compatibilidad con index.html (styles.scss)
 $color-background: #0d0d0d;
@@ -23,20 +27,25 @@ $color-white: #ffffff; // Added missing variable
 $color-text-dim: #cccccc;
 $color-silver: #d4d4d4;
 
-// Tipografía - diseño original
-$font-family-base: Verdana, Arial, Helvetica, sans-serif;
-$font-size-base: 11px;
-$font-size-small: 10px;
-$font-size-medium: 12px;
-$font-size-heading: 14px;
+// Tipografía - Modern Design
+$font-family-headings: 'Playfair Display', serif;
+$font-family-base: 'Inter', sans-serif; // Body text: Modern Sans
+$font-family-menu: 'Lora', serif; // Menu/UI: Elegant Serif
+$font-family-serif: 'Cormorant Garamond', serif;
+
+$font-size-base: 16px;
+$font-size-small: 0.875rem;
+$font-size-medium: 1.2rem;
+$font-size-heading: 1.8rem;
+$line-height-base: 1.6; // Adjusted for Sans-serif
 
 // Tipografía para compatibilidad con index.html (styles.scss)
 $font-logo: 'Great Vibes', cursive;
-$font-menu: 'Crimson Text', Georgia, serif;
-$font-body: Georgia, 'Times New Roman', serif;
+$font-menu: 'Lora', serif; // Unified menu font
+$font-body: 'Lora', serif;
 $logo-size: 4rem;
 $menu-size: 1.1rem;
-$text-size: 0.85rem;
+$text-size: 1rem;
 
 // Layout - diseño original
 $layout-max-width: 1350px;
