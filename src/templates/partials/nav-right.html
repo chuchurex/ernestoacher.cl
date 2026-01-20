@@ -1,13 +1,13 @@
 <nav class="page-nav-right">
     <ul>
         {{#each subNavItems}}
-        <li{{#if this.active}} class="active"{{/if}}>
+        <li{{#if this.active}} class="active" {{/if}}>
             {{#if this.url}}
-            <a href="{{this.url}}">- {{this.label}}</a>
+            <a href="{{this.url}}">{{this.label}}</a>
             {{else}}
-            - {{this.label}}
+            {{this.label}}
             {{/if}}
-        </li>
-        {{/each}}
+            </li>
+            {{/each}}
     </ul>
 </nav>

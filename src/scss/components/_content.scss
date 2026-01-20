@@ -3,122 +3,118 @@
 // ========================================
 
 @use '../variables' as *;
+@use '../mixins' as *;
 
-.content-wrapper {
-    width: $content-width;
-    background-color: $color-bg-content;
-}
+// ========================================
+// Content Component (Páginas Interiores)
+// ========================================
+
+@use '../variables' as *;
+
+// .content-wrapper is now handled in layout/_interior.scss
 
 // Header con imagen de fondo
 .content-header {
     position: relative;
-    background-color: transparent; // SVG provides the background/shape? Or keep dark bg? 
-    // The requirement says "un trazo... como inbox/arriba.png". 
-    // inbox/arriba.png likely sits ON TOP of the header or defines its top edge. 
-    // Let's keep background color for now but ensure SVG is visible.
-    background-color: #0e0e0e;
-    background-image: url('../assets/images/ernesto-grupo.png');
+    background-color: #000000;
+    // Layered background: Gradient to blend edges + Image
+    background-image:
+        linear-gradient(to right, #000 0%, transparent 20%, transparent 80%, #000 100%),
+        url('../assets/images/ernesto-grupo.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 200px;
+    min-height: 400px;
+    margin-bottom: $spacing-xl;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
+    // Gradient overlay for text readability (deeper)
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    }
 }
 
-// Menú flotante superior derecho (sigue la curva descendente del SVG)
+// Override por sección
+.page-unipersonal .content-header {
+    width: 100%;
+    background-image:
+        linear-gradient(to right, #000 0%, transparent 20%, transparent 80%, #000 100%),
+        url('../assets/images/unipersonal-header.png');
+    background-size: contain;
+    background-position: center center;
+}
+
+// Menú flotante superior derecho
 .secondary-menu {
     position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 3px;
+    flex-direction: row; // Horizontal is more modern
+    gap: $spacing-md;
     z-index: 10;
-    text-align: right;
 
     a {
-        font-family: $font-menu;
-        color: $color-text-dim;
+        font-family: $font-family-menu; // Lora for menus
+        color: rgba(255, 255, 255, 0.95); // High contrast
         text-decoration: none;
-        font-size: clamp(0.95rem, 1.2vw, 1.15rem);
-        display: block;
-        padding: 0.1rem 0;
-        transition: all 0.3s ease;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.4); // Darker background
+        backdrop-filter: blur(4px);
+        transition: $transition-base;
 
         &:hover {
             color: $color-white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        // Bullet más grande y blanco por defecto
         &::before {
-            content: '•';
-            color: $color-white;
-            font-size: 20px;
-            margin-right: 8px;
+            display: none; // Remove bullets
         }
 
         &.active {
+            background: $color-wine;
             color: $color-white;
-
-            // Bullet vino solo para active
-            &::before {
-                color: $color-wine;
-            }
         }
-    }
-
-    // Alineación curva descendente (sigue el trazo del SVG bajando)
-    a:nth-child(1) {
-        padding-right: 0px;
-    }
-
-    a:nth-child(2) {
-        padding-right: 8px;
-    }
-
-    a:nth-child(3) {
-        padding-right: 16px;
-    }
-
-    a:nth-child(4) {
-        padding-right: 24px;
-    }
-
-    a:nth-child(5) {
-        padding-right: 32px;
-    }
-
-    a:nth-child(6) {
-        padding-right: 40px;
     }
 }
 
 // Barra de menú con iconos (inferior del header)
 .header-menu {
-    background-color: #666;
-    padding: 8px 15px;
-    display: flex;
-    gap: $spacing-lg;
-    align-items: center;
-    justify-content: flex-end; // Alinear a la derecha
+    display: none; // Removing old inferior menu if we move to clean design, or styling it better.
+    // Let's keep it but modern
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    gap: $spacing-md;
+    display: flex;
 
     a {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
         text-decoration: none;
-        font-size: $font-size-base;
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 6px;
+        padding: 6px 12px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
         transition: $transition-base;
 
         &:hover {
-            text-decoration: underline;
+            background: $color-wine;
         }
     }
 }
@@ -129,46 +125,139 @@
     display: inline-block;
 }
 
-.main-content {
-    padding: $spacing-lg $spacing-xl;
-
-    p {
-        margin-bottom: $spacing-md;
-        line-height: 1.6;
-    }
-
-    h2 {
-        font-size: $font-size-heading;
-        font-weight: bold;
-        margin: $spacing-lg 0 10px 0;
-        color: #000;
-    }
-}
-
-.anecdotas-grid {
+// Layout Flex for Content + Right Nav
+.content-layout {
     display: flex;
-    gap: $spacing-xxl;
-    margin-top: $spacing-md;
+    flex-direction: column;
+    gap: $spacing-xl;
+    position: relative; // Context for absolute nav if needed, but Flex is better
+
+    @include respond-to('lg') {
+        flex-direction: column-reverse; // Content first on mobile
+    }
+
+    // Desktop: Side by side if desired, or Nav purely absolute "floating"
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1fr 200px; // Content | Menu
+        gap: $spacing-xl;
+    }
 }
 
-.anecdotas-column {
-    flex: 1;
+.content-body {
+    max-width: 850px; // Optimal line length for readability
 
-    h5 {
-        margin-bottom: $spacing-sm;
-        font-size: $font-size-base;
-        font-weight: bold;
+    // Main text styles
+    p {
+        margin-bottom: $spacing-lg;
+        font-size: 1.15rem;
+        line-height: 1.85;
+        color: #334155; // Slate 700 - Slightly softer than pure black/dark for better reading
+    }
 
-        a {
-            color: $color-link;
-            text-decoration: none;
-            transition: $transition-base;
+    h1,
+    h2,
+    h3 {
+        margin-top: $spacing-xl;
+        margin-bottom: $spacing-md;
+        color: $color-wine;
+    }
+}
 
-            &:hover {
-                text-decoration: underline;
+// Right Floating Menu
+.content-nav-right {
+    // Sticky behavior for the sub-menu?
+    position: sticky;
+    top: 20px;
+    align-self: start;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        text-align: right;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 15px;
+
+        li {
+            margin-bottom: 8px;
+
+            a {
+                font-size: 0.9rem;
+                color: $color-text-muted;
+                text-decoration: none;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: $color-wine;
+                    text-decoration: underline;
+                }
+            }
+
+            &.active a {
+                font-weight: 700;
+                color: $color-wine;
             }
         }
     }
 }
 
+// Header Title Styling (New)
+.header-title-container {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    z-index: 5;
 
+    h1 {
+        font-family: $font-family-headings;
+        font-size: 3.5rem;
+        color: $color-white;
+        margin: 0;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+    }
+}
+
+.anecdotas-column {
+    @include card-modern;
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Fill grid height
+
+    h5 {
+        margin-bottom: $spacing-xs;
+        font-weight: 700;
+        font-size: 1.1rem;
+
+        a {
+            color: $color-text-dark;
+            text-decoration: none;
+            display: block; // Make the whole title clickable area larger if needed
+
+            &::after {
+                content: '→';
+                opacity: 0;
+                margin-left: 5px;
+                transition: opacity 0.2s ease, margin-left 0.2s ease;
+                color: $color-wine;
+            }
+
+            &:hover {
+                color: $color-wine;
+
+                &::after {
+                    opacity: 1;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    // If there is content inside the column besides the h5, style it here
+    p {
+        font-size: 0.95rem;
+        color: $color-text-muted;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+}
