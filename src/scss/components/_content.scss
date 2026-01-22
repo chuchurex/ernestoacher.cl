@@ -42,14 +42,24 @@
     }
 }
 
-// Override por sección
+// Override por sección - Unipersonal
 .page-unipersonal .content-header {
     width: 100%;
-    background-image:
-        linear-gradient(to right, #000 0%, transparent 20%, transparent 80%, #000 100%),
-        url('../assets/images/unipersonal-header.png');
-    background-size: contain;
-    background-position: center center;
+    background-image: url('../assets/images/unipersonal-banner.png');
+    background-size: 100% auto; // Ancho 100%, alto automático
+    background-position: center center; // Centrado vertical y horizontal
+    background-repeat: no-repeat;
+    background-color: #000; // Fondo negro para espacios arriba/abajo
+}
+
+// Override por sección - Les Luthiers
+.page-lesluthiers .content-header {
+    width: 100%;
+    background-image: url('../assets/images/lesluthiers-banner.png');
+    background-size: 100% auto; // Ancho 100%, alto automático
+    background-position: center center; // Centrado vertical y horizontal
+    background-repeat: no-repeat;
+    background-color: #000; // Fondo negro para espacios arriba/abajo
 }
 
 // Menú flotante superior derecho
