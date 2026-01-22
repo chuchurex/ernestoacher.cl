@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio oficial de Ernesto Acher - Músico, compositor, director y humorista argentino">
+    <title>Ernesto Acher</title>
+
+    <!-- Google Fonts - Great Vibes para el título script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <div class="home-container">
+        <!-- ========== HEADER / LOGO ========== -->
+        <header class="site-header">
+            <h1 class="logo">Ernesto Acher</h1>
+            <div class="logo-ribbon"></div>
+        </header>
+
+        <!-- ========== MAIN LAYOUT ========== -->
+        <main class="home-content">
+            <!-- Elipse decorativa de fondo -->
+            <div class="ellipse-container">
+                <svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet" class="ellipse-svg">
+                    <defs>
+                        <linearGradient id="wineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#800000;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#500000;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path class="ellipse-path" fill-rule="evenodd" d="M 500 400
+                             m -450, 0
+                             a 450,300 0 1,0 900,0
+                             a 450,300 0 1,0 -900,0
+                             z
+                             M 500 400
+                             m -420, 0
+                             a 420,299 0 1,0 840,0
+                             a 420,299 0 1,0 -840,0
+                             z" />
+                </svg>
+            </div>
+
+            <!-- Menú Principal (izquierda) -->
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="/lesluthiers.html" data-section="lesluthiers">Les Luthiers</a></li>
+                    <li><a href="/labandaelastica.html" data-section="labanda">La Banda Elástica</a></li>
+                    <li><a href="/humorconachis.html" data-section="unipersonal">Unipersonal</a></li>
+                    <li><a href="/veladas.html" data-section="conciertos">Conciertos de música humor</a></li>
+                    <li><a href="/offside.html" data-section="offside">Offside Chamber Orchestra</a></li>
+                    <li><a href="/gershwin.html" data-section="gershwin">Homenaje a Gershwin</a></li>
+                    <li><a href="/animales.html" data-section="animales">Los animales de la música</a></li>
+                    <li><a href="/detodo.html" data-section="detodo">De todo como en botica</a></li>
+                    <li><a href="/realizaciones.html" data-section="realizaciones">Realizaciones recientes</a></li>
+                    <li><a href="/proyectos.html" data-section="nuevos">Nuevos proyectos</a></li>
+                    <li><a href="/menuconciertos.html" data-section="menuconciertos">Menú de conciertos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Área Central - Carrusel de Destacados -->
+            <section class="carousel-container">
+                <div class="carousel">
+                    <a href="/lesluthiers.html" class="carousel-slide" data-section="lesluthiers" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/ll.jpg" alt="Les Luthiers">
+                        <p class="carousel-text">Después de muchos años de tironeos y dudas, a principio de 1971 decidí dejar la arquitectura y dedicarme a la música. Los arquitectos aplaudieron y los músicos guardaron respetuoso silencio... Y una increíble cadena de casualidades me llevó a Les Luthiers.</p>
+                    </a>
+                    <a href="/labandaelastica.html" class="carousel-slide" data-section="labanda" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/lbe.jpg" alt="La Banda Elástica">
+                        <p class="carousel-text">En el verano de 1987, después de mucho tiempo me reencontré con Jorge Navarro y a fines de ese año, tomando café en su casa, le propuse armar un grupo con su trío como base y algunos amigos del ambiente de jazz. Quién iba a imaginar que en ese café nacía la Banda?...</p>
+                    </a>
+                    <a href="/humorconachis.html" class="carousel-slide" data-section="unipersonal" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/hca.jpg" alt="Unipersonal">
+                        <p class="carousel-text">A fines de 1992 fui con cierta frecuencia a un simpático pub del barrio de Belgrano que se llamaba &quot;Merlyn&quot;. Tomando café con los dueños, en marzo del &#x27;93, me preguntaron si no tenía ganas de hacer alguna presentación. Una? Hice un montón y durante muchos años...</p>
+                    </a>
+                    <a href="/veladas.html" class="carousel-slide" data-section="conciertos" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/ve.jpg" alt="Conciertos de música humor">
+                        <p class="carousel-text">La historia de las &quot;Veladas&quot; es en realidad la confluencia de dos cosas: &quot;Juegos&quot;, un disco de bromas y juegos musicales, y una invitación de Hugo Vitantonio para hacer esas bromas en vivo con la Sinfónica de Rosario.</p>
+                    </a>
+                    <a href="/offside.html" class="carousel-slide" data-section="offside" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/ocho.jpg" alt="Offside Chamber Orchestra">
+                        <p class="carousel-text">Cuando tuve que ponerme a aprender a toda máquina como demonios se hacía para &quot;mover&quot; una orquesta y poder dirigir la primera versión de las &quot;Veladas&quot; se me ocurrió armar un &quot;octeto de entrenamiento&quot; y ahí me picó el bichito de hacer música sinfónica &quot;cambiada de escala&quot;.</p>
+                    </a>
+                    <a href="/gershwin.html" class="carousel-slide" data-section="gershwin" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/hg.jpg" alt="Homenaje a Gershwin">
+                        <p class="carousel-text">En una visita de Lalo Schifrin a Buenos Aires, en 1997, me encontré con Baby López Furst y Jorge Navarro, a quienes hacía un tiempo que no veía. A partir de ese encuentro, la confluencia hacia lo que fue el homenaje a Gershwin fue casi mágica.</p>
+                    </a>
+                    <a href="/animales.html" class="carousel-slide" data-section="animales" style="text-decoration: none; color: inherit; cursor: pointer;">
+                        <img src="/images/carousel/ladm.jpg" alt="Los animales de la música">
+                        <p class="carousel-text">Después de la experiencia con el &quot;Colón Opera Concerto&quot;, Jorge de la Vega y yo quedamos con ganas de hacer algún otro proyecto y café va, café viene, en la esquina de Canning y Cabello, nos pusimos a delirar un concierto para chicos basado en música &quot;de animalitos&quot;.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Foto de Ernesto -->
+            <div class="ernesto-photo">
+                <img src="/assets/images/ernesto-acher.png" alt="Ernesto Acher">
+            </div>
+
+            <!-- Menú Media (derecha) -->
+            <nav class="menu-media">
+                <ul>
+                    <li><a href="/discografia.html">Discografía</a></li>
+                    <li><a href="/anecdotario-modular.html">Anecdotario</a></li>
+                    <li><a href="/partituras.html">Partituras</a></li>
+                    <li><a href="/links.html">Links</a></li>
+                    <li><a href="/galerias.html">Galerías</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </main>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="site-footer">
+            <a href="#actualizaciones" class="update-link">ACTUALIZADO: 18 DE SEPTIEMBRE</a>
+            <span class="archive-link">Escribenos hay más clic?</span>
+        </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
