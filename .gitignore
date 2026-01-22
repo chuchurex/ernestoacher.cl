@@ -15,8 +15,8 @@ node_modules/
 .vscode/
 .idea/
 
-# === Build (se genera, no se versiona) ===
-public/
+# === Build ===
+# public/ se incluye para deploy directo a Cloudflare Pages
 
 # === Logs y temporales ===
 *.log
