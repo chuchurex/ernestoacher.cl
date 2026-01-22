@@ -1,0 +1,44 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ========================================
+// Layout Interior (Todas las páginas menos Home)
+// ========================================
+
+.site-container {
+  display: flex;
+  flex-direction: row; // Sidebar + Content side by side
+  width: 100%;
+  max-width: $layout-max-width; // 1350px or 1200px as per vars
+  margin: 0 auto; // Center the whole container
+  position: relative;
+  padding: 0; // Outer padding removed for cleaner look
+  min-height: 100vh;
+
+  @include respond-to('md') {
+    flex-direction: column; // Stack on mobile
+    padding: 0;
+  }
+}
+
+// Wrapper for the main content area (right side)
+.content-wrapper {
+  flex: 1; // Take remaining space
+  width: auto; // Override fixed widths if any
+  max-width: 100%; // Ensure it doesn't overflow
+  padding-left: $spacing-xl; // Space between sidebar and content
+  padding-right: $spacing-xl;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xxl;
+
+  // Background separation (active for readability)
+  background-color: $color-bg-content;
+  border-left: 1px solid rgba(0, 0, 0, 0.05); // Subtle separator from sidebar
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.02); // Very soft depth shadow
+
+  @include respond-to('md') {
+    padding: $spacing-lg;
+    border-left: none;
+    box-shadow: none;
+  }
+}
