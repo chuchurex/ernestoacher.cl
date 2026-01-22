@@ -1,0 +1,28 @@
+{
+  "sidebar": [
+    { "id": "lesluthiers", "label": "Les Luthiers", "href": "lesluthiers.html" },
+    { "id": "labanda", "label": "La Banda Elástica", "href": "labandaelastica.html" },
+    { "id": "unipersonal", "label": "Unipersonal", "href": "humorconachis.html" },
+    { "id": "conciertos", "label": "Conciertos de música humor", "href": "veladas.html" },
+    { "id": "offside", "label": "Offside Chamber Orchestra", "href": "offside.html" },
+    { "id": "gershwin", "label": "Homenaje a Gershwin", "href": "gershwin.html" },
+    { "id": "animales", "label": "Los animales de la música", "href": "animales.html" },
+    { "id": "detodo", "label": "De todo como en botica", "href": "detodo.html" },
+    { "id": "realizaciones", "label": "Realizaciones recientes", "href": "realizaciones.html" },
+    { "id": "nuevos", "label": "Nuevos proyectos", "href": "proyectos.html" },
+    { "id": "menuconciertos", "label": "Menú de conciertos", "href": "menuconciertos.html" }
+  ],
+  "headerPrimary": [
+    { "id": "inicio", "label": "Inicio", "href": "index.html", "icon": "home" },
+    { "id": "links", "label": "Links", "href": "#links", "icon": "link" },
+    { "id": "actualizaciones", "label": "Actualizaciones", "href": "#actualizaciones", "icon": "refresh" },
+    { "id": "mapa", "label": "Mapa del sitio", "href": "#mapa", "icon": "sitemap" },
+    { "id": "contacto", "label": "Contacto", "href": "#contacto", "icon": "mail" }
+  ],
+  "headerSecondary": [
+    { "id": "discografia", "label": "Discografía", "href": "discografia.html" },
+    { "id": "anecdotario", "label": "Anecdotario", "href": "anecdotario-modular.html" },
+    { "id": "partituras", "label": "Partituras", "href": "partituras.html" },
+    { "id": "galerias", "label": "Galerías", "href": "galerias.html" }
+  ]
+}
