@@ -1,0 +1,9 @@
+{
+  "id": "espectaculos",
+  "title": "Espectáculos",
+  "content": "<table>\n<tr>\n <h5><strong><br/>\n<a href=\"e1.html\">El show de la Banda Elástica</a></strong><br/>\n 1988 Buenos Aires: Teatro Cervantes, Teatro Lorange, Teatro \n Blanca Podestá<br/>\n 1989 Mar del Plata: Teatro Estrellas</h5>\n<h5><strong><img align=\"right\" src=\"../images/lbe/espc.jpg\"/><a href=\"e2.html\">La \n Banda Elástica ´89</a></strong><br/>\n 1989 Buenos Aires: Teatro del Globo<br/>\n 1990 Mar del Plata: Teatro Colón</h5>\n<h5><strong><a href=\"e3.html\">3a. Edición</a></strong><br/>\n 1990 -1991 Buenos Aires: Teatro del Globo<br/>\n 1991 -1992 Mar del Plata: Teatro Colón</h5>\n<h5><strong><a href=\"e4.html\">Perche mi piace</a></strong><br/>\n 1992 Buenos Aires: Teatro Podestá<br/>\n</h5>\n</tr>\n</table>\n<p> </p>",
+  "images": [
+    "espc.jpg"
+  ],
+  "nav_links": {}
+}

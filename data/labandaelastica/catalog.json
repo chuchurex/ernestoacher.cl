@@ -1,0 +1,56 @@
+{
+  "section": "labandaelastica",
+  "title": "La Banda Elástica",
+  "pages": [
+    {
+      "id": "index",
+      "title": "La Banda Elástica",
+      "file": "index.html"
+    },
+    {
+      "id": "espectaculos",
+      "title": "Espectáculos",
+      "file": "espectaculos.html"
+    },
+    {
+      "id": "discografia",
+      "title": "Discografía",
+      "file": "discografia.html"
+    },
+    {
+      "id": "fotos",
+      "title": "Fotos",
+      "file": "fotos.html"
+    },
+    {
+      "id": "videos",
+      "title": "Videos",
+      "file": "videos.html"
+    },
+    {
+      "id": "audio",
+      "title": "Audio",
+      "file": "audio.html"
+    },
+    {
+      "id": "e1",
+      "title": "El show de la Banda Elástica",
+      "file": "e1.html"
+    },
+    {
+      "id": "e2",
+      "title": "La Banda Elástica '89",
+      "file": "e2.html"
+    },
+    {
+      "id": "e3",
+      "title": "3a. Edición",
+      "file": "e3.html"
+    },
+    {
+      "id": "e4",
+      "title": "Perché mi piace",
+      "file": "e4.html"
+    }
+  ]
+}

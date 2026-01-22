@@ -1,0 +1,243 @@
+{
+  "total": 19,
+  "categories": {
+    "General": [
+      {
+        "id": "algun_proy",
+        "title": "Algún proyecto?",
+        "cleanTitle": "Algún proyecto?",
+        "category": "General"
+      },
+      {
+        "id": "catastrofe",
+        "title": "Catástrofe",
+        "cleanTitle": "Catástrofe",
+        "category": "General"
+      },
+      {
+        "id": "mhijo",
+        "title": "Qué le anda pasando, m’hijo?",
+        "cleanTitle": "Qué le anda pasando, m’hijo?",
+        "category": "General"
+      },
+      {
+        "id": "molloy",
+        "title": "El estreno de Molloy",
+        "cleanTitle": "El estreno de Molloy",
+        "category": "General"
+      },
+      {
+        "id": "pushkin",
+        "title": "La estatua de Pushkin",
+        "cleanTitle": "La estatua de Pushkin",
+        "category": "General"
+      },
+      {
+        "id": "rosario",
+        "title": "Debut en Rosario",
+        "cleanTitle": "Debut en Rosario",
+        "category": "General"
+      }
+    ],
+    "La Banda Elástica": [
+      {
+        "id": "carlitosy",
+        "title": "(La Banda Elástica) Carlitos y la trompeta",
+        "cleanTitle": "Carlitos y la trompeta",
+        "category": "La Banda Elástica"
+      },
+      {
+        "id": "fnegras",
+        "title": "(La Banda Elástica) Flores negras",
+        "cleanTitle": "Flores negras",
+        "category": "La Banda Elástica"
+      },
+      {
+        "id": "lbe01",
+        "title": "(La Banda Elástica) Halloween",
+        "cleanTitle": "Halloween",
+        "category": "La Banda Elástica"
+      },
+      {
+        "id": "lbe18",
+        "title": "(La Banda Elástica) Era más blanda que el agua...",
+        "cleanTitle": "Era más blanda que el agua...",
+        "category": "La Banda Elástica"
+      }
+    ],
+    "Les Luthiers": [
+      {
+        "id": "drodrigo",
+        "title": "(Les Luthiers) Historia de Don Rodrigo",
+        "cleanTitle": "Historia de Don Rodrigo",
+        "category": "Les Luthiers"
+      },
+      {
+        "id": "ll03",
+        "title": "(Les Luthiers) Pucho y el souvenir",
+        "cleanTitle": "Pucho y el souvenir",
+        "category": "Les Luthiers"
+      },
+      {
+        "id": "ll04",
+        "title": "(Les Luthiers) Tarzán y el telón",
+        "cleanTitle": "Tarzán y el telón",
+        "category": "Les Luthiers"
+      },
+      {
+        "id": "ll05",
+        "title": "(Les Luthiers) La inundación",
+        "cleanTitle": "La inundación",
+        "category": "Les Luthiers"
+      },
+      {
+        "id": "ll06",
+        "title": "(Les Luthiers) Viaje accidentado",
+        "cleanTitle": "Viaje accidentado",
+        "category": "Les Luthiers"
+      },
+      {
+        "id": "ll35",
+        "title": "(Les Luthiers) Una ventana...",
+        "cleanTitle": "Una ventana...",
+        "category": "Les Luthiers"
+      },
+      {
+        "id": "zanotti",
+        "title": "(Les Luthiers) Zanotti",
+        "cleanTitle": "Zanotti",
+        "category": "Les Luthiers"
+      }
+    ],
+    "Gershwin": [
+      {
+        "id": "mejor_clari",
+        "title": "(Gershwin, el hombre que amamos) El mejor clarinetista",
+        "cleanTitle": "El mejor clarinetista",
+        "category": "Gershwin"
+      },
+      {
+        "id": "volados",
+        "title": "(Gershwin, el hombre que amamos) Volados…",
+        "cleanTitle": "Volados…",
+        "category": "Gershwin"
+      }
+    ]
+  },
+  "all": [
+    {
+      "id": "algun_proy",
+      "title": "Algún proyecto?",
+      "cleanTitle": "Algún proyecto?",
+      "category": "General"
+    },
+    {
+      "id": "carlitosy",
+      "title": "(La Banda Elástica) Carlitos y la trompeta",
+      "cleanTitle": "Carlitos y la trompeta",
+      "category": "La Banda Elástica"
+    },
+    {
+      "id": "catastrofe",
+      "title": "Catástrofe",
+      "cleanTitle": "Catástrofe",
+      "category": "General"
+    },
+    {
+      "id": "drodrigo",
+      "title": "(Les Luthiers) Historia de Don Rodrigo",
+      "cleanTitle": "Historia de Don Rodrigo",
+      "category": "Les Luthiers"
+    },
+    {
+      "id": "fnegras",
+      "title": "(La Banda Elástica) Flores negras",
+      "cleanTitle": "Flores negras",
+      "category": "La Banda Elástica"
+    },
+    {
+      "id": "lbe01",
+      "title": "(La Banda Elástica) Halloween",
+      "cleanTitle": "Halloween",
+      "category": "La Banda Elástica"
+    },
+    {
+      "id": "lbe18",
+      "title": "(La Banda Elástica) Era más blanda que el agua...",
+      "cleanTitle": "Era más blanda que el agua...",
+      "category": "La Banda Elástica"
+    },
+    {
+      "id": "ll03",
+      "title": "(Les Luthiers) Pucho y el souvenir",
+      "cleanTitle": "Pucho y el souvenir",
+      "category": "Les Luthiers"
+    },
+    {
+      "id": "ll04",
+      "title": "(Les Luthiers) Tarzán y el telón",
+      "cleanTitle": "Tarzán y el telón",
+      "category": "Les Luthiers"
+    },
+    {
+      "id": "ll05",
+      "title": "(Les Luthiers) La inundación",
+      "cleanTitle": "La inundación",
+      "category": "Les Luthiers"
+    },
+    {
+      "id": "ll06",
+      "title": "(Les Luthiers) Viaje accidentado",
+      "cleanTitle": "Viaje accidentado",
+      "category": "Les Luthiers"
+    },
+    {
+      "id": "ll35",
+      "title": "(Les Luthiers) Una ventana...",
+      "cleanTitle": "Una ventana...",
+      "category": "Les Luthiers"
+    },
+    {
+      "id": "mejor_clari",
+      "title": "(Gershwin, el hombre que amamos) El mejor clarinetista",
+      "cleanTitle": "El mejor clarinetista",
+      "category": "Gershwin"
+    },
+    {
+      "id": "mhijo",
+      "title": "Qué le anda pasando, m’hijo?",
+      "cleanTitle": "Qué le anda pasando, m’hijo?",
+      "category": "General"
+    },
+    {
+      "id": "molloy",
+      "title": "El estreno de Molloy",
+      "cleanTitle": "El estreno de Molloy",
+      "category": "General"
+    },
+    {
+      "id": "pushkin",
+      "title": "La estatua de Pushkin",
+      "cleanTitle": "La estatua de Pushkin",
+      "category": "General"
+    },
+    {
+      "id": "rosario",
+      "title": "Debut en Rosario",
+      "cleanTitle": "Debut en Rosario",
+      "category": "General"
+    },
+    {
+      "id": "volados",
+      "title": "(Gershwin, el hombre que amamos) Volados…",
+      "cleanTitle": "Volados…",
+      "category": "Gershwin"
+    },
+    {
+      "id": "zanotti",
+      "title": "(Les Luthiers) Zanotti",
+      "cleanTitle": "Zanotti",
+      "category": "Les Luthiers"
+    }
+  ]
+}

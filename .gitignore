@@ -1,69 +1,39 @@
-# Environment variables
-.env
+# ========================================
+# Ernesto Acher - .gitignore
+# ========================================
 
-# Python
+# === Entorno ===
+.env
 .venv/
+venv/
+node_modules/
+
+# === Sistema ===
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# === Build (se genera, no se versiona) ===
+public/
+
+# === Logs y temporales ===
+*.log
+*.tmp
+trash/
+
+# === Python ===
 __pycache__/
 *.py[cod]
 *.pyc
 
-# Scripts de desarrollo
-download_*.py
-extract_content.py
-generate_anecdotario.py
-monitor_galerias.sh
-
-# Backups y contenido descargado
-backup/
-content/
-data/
-!src/content/
-!src/data/
-
-# Logs
-*.log
-
-# Archivos de datos temporales
-*.json
-!package.json
-
-# Documentación de proceso
-*_DOWNLOAD_SUMMARY.md
-*_PROGRESO.md
-RECUPERACION_PROGRESO.md
-ANECDOTAS_RECUPERADAS.md
-RESUMEN_*.md
-PLAN_REDESIGN.md
-INVENTARIO_COMPARATIVO.md
-ESTADO_PROYECTO.md
-PROGRESO_GALERIAS.md
-
-# Archivos de trabajo/desarrollo
-inbox/
-index-nuevo.html
-anecdotario-old.html
-anecdotario-v2.html
-cloud.html
-
-# Node modules
-node_modules/
-
-# macOS
-.DS_Store
-
-# Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Build outputs
-dist/
-build/
-
-# Sass
+# === Sass ===
 .sass-cache/
 *.css.map
 
-# Package lock
-package-lock.json
+# === Archivos de datos grandes ===
+*.json
+!package.json
+!src/data/**/*.json
+!data/**/*.json

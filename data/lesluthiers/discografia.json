@@ -1,0 +1,9 @@
+{
+  "id": "discografia",
+  "source": "discos.htm",
+  "title": "Discografía",
+  "content": "<h1>Les Luthiers</h1>\n<a href=\"index.html\">- \n Comienzo</a><a href=\"espect.html\">- \n Espectáculos</a>\n<img src=\"../images/ll/discos.jpg\" width=\"184\" height=\"214\">\n<a href=\"fotos.html\">- Fotos</a>",
+  "images": [
+    "discos.jpg"
+  ]
+}

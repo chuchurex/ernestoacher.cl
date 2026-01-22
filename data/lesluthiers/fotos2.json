@@ -1,0 +1,29 @@
+{
+  "id": "fotos2",
+  "source": "fotos2.htm",
+  "title": "Fotos - Parte 2",
+  "content": "<h1>Fotos Les Luthiers</h1>\n<a href=\"index.html\">- \n Comienzo</a><a href=\"espect.html\">- \n Espectáculos</a><a href=\"fotos.html\">página uno</a><a href=\"fotos2.html\">página dos</a>\n<img src=\"../galerias/fotos/ll_explicado1_jpg.jpg\" width=\"100\" height=\"60\">\n\n<img src=\"../galerias/fotos/ll_explicado2_jpg.jpg\" width=\"100\" height=\"65\">\n\n<img src=\"../galerias/fotos/ll_gabo2_jpg.jpg\" width=\"100\" height=\"74\">\n\n<img src=\"../galerias/fotos/ll_gero72_jpg.jpg\" width=\"100\" height=\"99\">\n\n<img src=\"../galerias/fotos/ll_falmm_jpg.jpg\" width=\"100\" height=\"68\">\n\n<img src=\"../galerias/fotos/ll_los2mm_jpg.jpg\" width=\"100\" height=\"69\">\n\n<img src=\"../galerias/fotos/ll_cafepuerto1_jpg.jpg\" width=\"67\" height=\"100\">\n\n<img src=\"../galerias/fotos/ll_cuarteto_jpg.jpg\" width=\"100\" height=\"62\">\n\n<img src=\"../galerias/fotos/ll_benedetti_jpg.jpg\" width=\"100\" height=\"67\">\n\n<img src=\"../galerias/fotos/ll_fcolon2_jpg.jpg\" width=\"100\" height=\"68\">\n\n<img src=\"../galerias/fotos/ll_fcolon7_jpg.jpg\" width=\"100\" height=\"69\">\n\n<img src=\"../galerias/fotos/ll_fcolon8_jpg.jpg\" width=\"97\" height=\"100\">\n\n<img src=\"../galerias/fotos/ll_gallinita1_jpg.jpg\" width=\"100\" height=\"69\">\n\n<img src=\"../galerias/fotos/ll_gulevandia_jpg.jpg\" width=\"100\" height=\"64\">\n\n<img src=\"../galerias/fotos/ll_jm_ea_gm_jpg.jpg\" width=\"81\" height=\"100\">\n\n<img src=\"../galerias/fotos/ll_menotti_jpg.jpg\" width=\"85\" height=\"100\">\n\n<img src=\"../galerias/fotos/ll_osk_ek_jpg.jpg\" width=\"100\" height=\"65\">\n\n<img src=\"../galerias/fotos/ll_rey_enam_jpg.jpg\" width=\"100\" height=\"77\">\n\n<img src=\"../galerias/fotos/ll_anoralgias_jpg.jpg\" width=\"100\" height=\"79\">\n\n<img src=\"../galerias/fotos/ll_vinicius1_jpg.jpg\" width=\"100\" height=\"92\">\n\n<img src=\"../galerias/fotos/ll_tyo_grab_jpg.jpg\" width=\"100\" height=\"71\">\n<a href=\"discos.html\">- Discografía</a><a href=\"videos.html\">- Videos</a>",
+  "images": [
+    "../galerias/fotos/ll_gabo2_jpg.jpg",
+    "../galerias/fotos/ll_gallinita1_jpg.jpg",
+    "../galerias/fotos/ll_explicado2_jpg.jpg",
+    "../galerias/fotos/ll_gero72_jpg.jpg",
+    "../galerias/fotos/ll_osk_ek_jpg.jpg",
+    "../galerias/fotos/ll_explicado1_jpg.jpg",
+    "../galerias/fotos/ll_cuarteto_jpg.jpg",
+    "../galerias/fotos/ll_fcolon7_jpg.jpg",
+    "../galerias/fotos/ll_vinicius1_jpg.jpg",
+    "../galerias/fotos/ll_jm_ea_gm_jpg.jpg",
+    "../galerias/fotos/ll_cafepuerto1_jpg.jpg",
+    "../galerias/fotos/ll_falmm_jpg.jpg",
+    "../galerias/fotos/ll_gulevandia_jpg.jpg",
+    "../galerias/fotos/ll_fcolon2_jpg.jpg",
+    "../galerias/fotos/ll_menotti_jpg.jpg",
+    "../galerias/fotos/ll_los2mm_jpg.jpg",
+    "../galerias/fotos/ll_benedetti_jpg.jpg",
+    "../galerias/fotos/ll_fcolon8_jpg.jpg",
+    "../galerias/fotos/ll_anoralgias_jpg.jpg",
+    "../galerias/fotos/ll_tyo_grab_jpg.jpg",
+    "../galerias/fotos/ll_rey_enam_jpg.jpg"
+  ]
+}

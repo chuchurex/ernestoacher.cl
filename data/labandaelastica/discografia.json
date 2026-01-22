@@ -1,0 +1,9 @@
+{
+  "id": "discografia",
+  "title": "Discografía",
+  "content": "<table>\n<tr>\n <h1> La Banda Elástica</h1>\n\n</tr>\n</table>\n<table>\n<tr>\n <table>\n<tr>\n\n<table>\n<tr>\n\n</tr>\n<tr>\n<a href=\"../discos/lbe1.html\">1990</a>\n<a href=\"../discos/lbe1.html\"> Volumen 1</a>\n</tr>\n<tr>\n<a href=\"../discos/lbe2.html\">1991</a>\n<a href=\"../discos/lbe2.html\">Volumen 2</a>\n</tr>\n<tr>\n<a href=\"../discos/lbe3.html\">1992</a>\n<a href=\"../discos/lbe3.html\">Perche Mi Piace</a>\n</tr>\n<tr>\n\n</tr>\n</table>\n<img alt=\"Discos de La Banda Elástica\" src=\"../images/lbe/discos.jpg\"/>\n</tr>\n</table>\n\n</tr>\n</table>",
+  "images": [
+    "discos.jpg"
+  ],
+  "nav_links": {}
+}
