@@ -1,0 +1,98 @@
+{
+  "section": "lesluthiers",
+  "title": "Les Luthiers",
+  "pages": [
+    {
+      "id": "index",
+      "title": "Les Luthiers - Comienzo",
+      "file": "index.html",
+      "images_count": 1
+    },
+    {
+      "id": "espectaculos",
+      "title": "Espectáculos",
+      "file": "espectaculos.html",
+      "images_count": 1
+    },
+    {
+      "id": "discografia",
+      "title": "Discografía",
+      "file": "discografia.html",
+      "images_count": 1
+    },
+    {
+      "id": "fotos",
+      "title": "Fotos - Parte 1",
+      "file": "fotos.html",
+      "images_count": 21
+    },
+    {
+      "id": "fotos2",
+      "title": "Fotos - Parte 2",
+      "file": "fotos2.html",
+      "images_count": 21
+    },
+    {
+      "id": "videos",
+      "title": "Videos",
+      "file": "videos.html",
+      "images_count": 4
+    },
+    {
+      "id": "1971",
+      "title": "Opus Pi (1971)",
+      "file": "1971.html",
+      "images_count": 0
+    },
+    {
+      "id": "1972",
+      "title": "Recital '72 - Opus Pi II (1972)",
+      "file": "1972.html",
+      "images_count": 0
+    },
+    {
+      "id": "1975",
+      "title": "Recital '75 (1975)",
+      "file": "1975.html",
+      "images_count": 0
+    },
+    {
+      "id": "1976",
+      "title": "Viejos Fracasos (1976)",
+      "file": "1976.html",
+      "images_count": 0
+    },
+    {
+      "id": "1977",
+      "title": "Mastropiero que Nunca (1977)",
+      "file": "1977.html",
+      "images_count": 0
+    },
+    {
+      "id": "1979",
+      "title": "Muchas Gracias de Nada (1979)",
+      "file": "1979.html",
+      "images_count": 0
+    },
+    {
+      "id": "1981",
+      "title": "Luthierías (1981)",
+      "file": "1981.html",
+      "images_count": 0
+    },
+    {
+      "id": "1985",
+      "title": "Humor Dulce Hogar (1985)",
+      "file": "1985.html",
+      "images_count": 0
+    },
+    {
+      "id": "1986",
+      "title": "Recital en el Teatro Colón (1986)",
+      "file": "1986.html",
+      "images_count": 0
+    }
+  ],
+  "total_pages": 15,
+  "total_images": 29
+}

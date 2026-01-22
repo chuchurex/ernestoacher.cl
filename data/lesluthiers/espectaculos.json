@@ -1,0 +1,9 @@
+{
+  "id": "espectaculos",
+  "source": "espect.htm",
+  "title": "Espectáculos",
+  "content": "<h1>Les Luthiers</h1>\n<a href=\"index.html\">- \n Comienzo</a><a href=\"1971.html\"><h6>1971</h6>\n</a><h6>1972</h6>\n<h5><strong></strong></h5>\n<a href=\"1973.html\"><h6>1973</h6>\n</a><a href=\"1974.html\"><h6>1974</h6>\n</a><a href=\"1975.html\"><h6>1975</h6>\n</a><a href=\"1976.html\"><h6>1976</h6>\n</a><a href=\"1977.html\"><h6>1977</h6>\n</a><a href=\"1979.html\"><h6>1979</h6>\n</a><a href=\"1980.html\"><h6>1980</h6>\n</a><a href=\"1981.html\"><h6>1981</h6>\n</a><a href=\"1983.html\"><h6>1983</h6>\n</a><a href=\"1985.html\"><h6>1985</h6>\n</a><a href=\"1986.html\"><h6>1986</h6>\n</a><h5><a href=\"1971.html\">Opus Pi</a></h5>\n<h5><a href=\"1972.html\">Recital ’72 (Opus Pi II)</a></h5>\n<h5><a href=\"1972b.html\">Recital sinfónico ’72</a></h5>\n<h5><a href=\"1973.html\">Recital ’73</a></h5>\n<h5><a href=\"1974.html\">Recital ’74</a></h5>\n<h5><a href=\"1975.html\">Recital ’75</a></h5>\n<h5><a href=\"1976.html\">Viejos Fracasos</a></h5>\n<h5><a href=\"1977.html\">Mastropiero que Nunca</a></h5>\n<h5><a href=\"1979.html\">Muchas Gracias de Nada</a></h5>\n<h5><a href=\"1980.html\">Los Clásicos de Les Luthiers</a></h5>\n<h5><a href=\"1981.html\">Luthierías</a></h5>\n<h5><a href=\"1983.html\">Por Humor al Arte</a></h5>\n<h5><a href=\"1985.html\">Humor Dulce Hogar</a></h5>\n<h5><a href=\"1986.html\">Recital en el Teatro Colón</a><strong><br></strong></h5>\n\n<img src=\"../images/ll/espect.jpg\" alt=\"Añoralgias\" width=\"158\" height=\"125\">\n<a href=\"discos.html\">- Discografía</a><a href=\"fotos.html\">- Fotos</a>",
+  "images": [
+    "espect.jpg"
+  ]
+}
