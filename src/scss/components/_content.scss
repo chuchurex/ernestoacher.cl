@@ -56,10 +56,30 @@
 .page-lesluthiers .content-header {
     width: 100%;
     background-image: url('../assets/images/lesluthiers-banner.png');
-    background-size: 100% auto; // Ancho 100%, alto automático
-    background-position: center center; // Centrado vertical y horizontal
+    background-size: 100% auto;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-color: #000; // Fondo negro para espacios arriba/abajo
+    background-color: #000;
+}
+
+// Override por sección - La Banda Elástica
+.page-banda-elastica .content-header {
+    width: 100%;
+    background-image: url('../assets/images/labandaelastica-banner.png');
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+// Override por sección - Veladas
+.page-veladas .content-header {
+    width: 100%;
+    background-image: url('../assets/images/veladas-banner.png');
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000;
 }
 
 // Menú flotante superior derecho
