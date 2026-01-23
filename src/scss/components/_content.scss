@@ -82,6 +82,16 @@
     background-color: #000;
 }
 
+// Override por sección - Galerías
+.page-galerias .content-header {
+    width: 100%;
+    background-image: url('../assets/images/galerias-banner.png');
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
 // Menú flotante superior derecho
 .secondary-menu {
     position: absolute;
