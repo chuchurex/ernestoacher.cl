@@ -118,6 +118,33 @@
       "subPages": [
         { "label": "Comienzo", "url": "/menuconciertos.html", "default": true }
       ]
+    },
+    {
+      "id": "quorum",
+      "label": "Quorum",
+      "url": "/quorum.html",
+      "subPages": [
+        { "label": "Comienzo", "url": "/quorum.html", "default": true },
+        { "label": "Grabación", "url": "/quorum/disco.html" },
+        { "label": "Fotos", "url": "/quorum/fotos.html" },
+        { "label": "Audio", "url": "/quorum/audio.html" }
+      ]
+    },
+    {
+      "id": "enserio",
+      "label": "En Serio",
+      "url": "/enserio.html",
+      "subPages": [
+        { "label": "Comienzo", "url": "/enserio.html", "default": true }
+      ]
+    },
+    {
+      "id": "lrda",
+      "label": "Los Rincones de Acher",
+      "url": "/lrda.html",
+      "subPages": [
+        { "label": "Comienzo", "url": "/lrda.html", "default": true }
+      ]
     }
   ],
   "headerPrimary": [
@@ -130,6 +157,7 @@
   "headerSecondary": [
     { "id": "discografia", "label": "Discografía", "url": "/discografia.html" },
     { "id": "anecdotario", "label": "Anecdotario", "url": "/anecdotario.html" },
+    { "id": "pnm", "label": "Pregunte nomás", "url": "/pnm.html" },
     { "id": "partituras", "label": "Partituras", "url": "/partituras.html" },
     { "id": "galerias", "label": "Galerías", "url": "/galerias.html" }
   ]
